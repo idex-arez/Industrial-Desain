@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    function isValidComment(data) {
+      return data.id is string
+        && data.edition is string && data.edition.size() <= 128
+        && data.author is string && data.author.size() > 0 && data.author.size() <= 128
+        && data.content is string && data.content.size() > 0 && data.content.size() <= 2000;
+    }
+
+    function isValidArticle(data) {
+      return data.id is string
+        && data.title is string && data.title.size() > 0 && data.title.size() <= 255
+        && data.tabCategory is string && data.tabCategory.size() <= 64
+        && data.bodyHtml is string;
+    }
+
+    function isValidPortfolio(data) {
+      return data.id is string
+        && data.title is string && data.title.size() > 0 && data.title.size() <= 255
+        && data.category is string && data.category.size() <= 64;
+    }
+
+    // Test connection doc
+    match /test/{docId} {
+      allow read: if true;
+    }
+
+    // Articles collection: public can read, author/admin can manage
+    match /articles/{articleId} {
+      allow read: if true;
+      allow create, update: if isValidId(articleId) && isValidArticle(request.resource.data);
+      allow delete: if isValidId(articleId);
+    }
+
+    // Portfolios collection: public can read, author/admin can manage
+    match /portfolios/{portfolioId} {
+      allow read: if true;
+      allow create, update: if isValidId(portfolioId) && isValidPortfolio(request.resource.data);
+      allow delete: if isValidId(portfolioId);
+    }
+
+    // Comments collection: public can read and submit valid comments, can delete
+    match /comments/{commentId} {
+      allow read: if true;
+      allow create: if isValidId(commentId) && isValidComment(request.resource.data);
+      allow update: if isValidId(commentId) && isValidComment(request.resource.data);
+      allow delete: if isValidId(commentId);
+    }
+
+    // Views collection: public can read and update view counts
+    match /views/{postId} {
+      allow read: if true;
+      allow write: if isValidId(postId) && request.resource.data.views is number;
+    }
+  }
+}

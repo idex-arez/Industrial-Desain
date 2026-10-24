@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#071224; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1a"/>
+      <stop offset="45%" stop-color="#0a1d36"/>
+      <stop offset="100%" stop-color="#08172c"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="emeraldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="blueCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2747" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0a1b32" stop-opacity="0.9"/>
+    </linearGradient>
+    <!-- Map Dots Pattern -->
+    <pattern id="globePattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.2" fill="#38bdf8" opacity="0.18"/>
+    </pattern>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="675" fill="url(#bgGrad9)"/>
+  <rect width="1200" height="675" fill="url(#globePattern)"/>
+
+  <!-- Atmospheric Glows -->
+  <circle cx="950" cy="240" r="280" fill="#0284c7" opacity="0.16" filter="blur(70px)"/>
+  <circle cx="200" cy="450" r="250" fill="#f59e0b" opacity="0.08" filter="blur(80px)"/>
+
+  <!-- Top Category Banner Tag -->
+  <g transform="translate(60, 52)">
+    <rect width="280" height="34" rx="17" fill="#1e3a8a" fill-opacity="0.4" stroke="#60a5fa" stroke-width="1.2"/>
+    <circle cx="20" cy="17" r="5" fill="#60a5fa"/>
+    <text x="36" y="22" fill="#93c5fd" font-size="12" font-weight="700" letter-spacing="1.5" text-transform="uppercase">REGULASI &amp; KEBIJAKAN GLOBAL</text>
+  </g>
+
+  <!-- Headline & Subtitle -->
+  <g transform="translate(60, 130)">
+    <text x="0" y="0" fill="#ffffff" font-size="34" font-weight="800" letter-spacing="-0.5">
+      Desain Industri di Dunia &amp; di Indonesia
+    </text>
+    <text x="0" y="32" fill="#94a3b8" font-size="16" font-weight="500">
+      Sistem Hague WIPO, Percepatan DJKI 4 Bulan, Angka Kredit Dosen 15 Kum &amp; RUU 2026
+    </text>
+  </g>
+
+  <!-- THREE METRIC HIGHLIGHT HERO CARDS (Middle Row) -->
+  <g transform="translate(60, 205)">
+    
+    <!-- CARD 1: SISTEM HAGUE WIPO -->
+    <g transform="translate(0, 0)">
+      <rect width="330" height="180" rx="16" fill="url(#blueCardGrad)" stroke="#1e40af" stroke-width="1.2"/>
+      <path d="M 0 16 C 0 7.16 7.16 0 16 0 L 314 0 C 322.84 0 330 7.16 330 16 L 330 40 L 0 40 Z" fill="#1e3a8a" fill-opacity="0.6"/>
+      <text x="20" y="26" fill="#93c5fd" font-size="11" font-weight="700" letter-spacing="1">WIPO HAGUE SYSTEM (JENEWA)</text>
+
+      <text x="20" y="88" fill="#38bdf8" font-size="36" font-weight="900" letter-spacing="-1">100+ NEGARA</text>
+      <text x="20" y="116" fill="#ffffff" font-size="13" font-weight="700">1 Permohonan Internasional</text>
+      <text x="20" y="140" fill="#94a3b8" font-size="11" line-height="1.3">
+        Mencakup 28.588 desain (pertumbuhan 9,4%), Uni Eropa &amp; Tiongkok destinasi utama.
+      </text>
+      <circle cx="285" cy="85" r="24" fill="#0284c7" fill-opacity="0.2"/>
+      <!-- Globe Icon -->
+      <path d="M 285 71 A 14 14 0 1 0 285 99 A 14 14 0 1 0 285 71 M 271 85 L 299 85 M 285 71 C 281 76 279 81 279 85 C 279 89 281 94 285 99 C 289 94 291 89 291 85 C 291 81 289 76 285 71 Z" fill="none" stroke="#38bdf8" stroke-width="1.6"/>
+    </g>
+
+    <!-- CARD 2: DJKI KEMENKUMHAM 4 BULAN -->
+    <g transform="translate(370, 0)">
+      <rect width="330" height="180" rx="16" fill="url(#blueCardGrad)" stroke="#059669" stroke-width="1.2"/>
+      <path d="M 0 16 C 0 7.16 7.16 0 16 0 L 314 0 C 322.84 0 330 7.16 330 16 L 330 40 L 0 40 Z" fill="#065f46" fill-opacity="0.6"/>
+      <text x="20" y="26" fill="#6ee7b7" font-size="11" font-weight="700" letter-spacing="1">DJKI KEMENTERIAN HUKUM RI</text>
+
+      <text x="20" y="88" fill="#34d399" font-size="36" font-weight="900" letter-spacing="-1">4 BULAN</text>
+      <text x="20" y="116" fill="#ffffff" font-size="13" font-weight="700">Layanan Kilat Pemeriksaan</text>
+      <text x="20" y="140" fill="#94a3b8" font-size="11" line-height="1.3">
+        Pemangkasan drastis dari durasi standar berbulan-bulan demi kepastian bisnis &amp; industri.
+      </text>
+      <!-- Fast forward icon -->
+      <circle cx="285" cy="85" r="24" fill="#059669" fill-opacity="0.2"/>
+      <path d="M 276 77 L 285 85 L 276 93 M 285 77 L 294 85 L 285 93" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- CARD 3: DOSEN & PERGURUAN TINGGI -->
+    <g transform="translate(740, 0)">
+      <rect width="340" height="180" rx="16" fill="url(#blueCardGrad)" stroke="#d97706" stroke-width="1.2"/>
+      <path d="M 0 16 C 0 7.16 7.16 0 16 0 L 324 0 C 332.84 0 340 7.16 340 16 L 340 40 L 0 40 Z" fill="#78350f" fill-opacity="0.6"/>
+      <text x="20" y="26" fill="#fcd34d" font-size="11" font-weight="700" letter-spacing="1">ANGKA KREDIT DOSEN &amp; KAMPUS</text>
+
+      <text x="20" y="88" fill="#fbbf24" font-size="36" font-weight="900" letter-spacing="-1">+15 KUM</text>
+      <text x="20" y="116" fill="#ffffff" font-size="13" font-weight="700">Per Desain Industri Bersertifikat</text>
+      <text x="20" y="140" fill="#94a3b8" font-size="11" line-height="1.3">
+        Kepmen 209/P/2024 &amp; PermenPANRB 14/2026: insentif nyata hilirisasi prototipe desain.
+      </text>
+      <!-- Academic Cap Icon -->
+      <circle cx="295" cy="85" r="24" fill="#d97706" fill-opacity="0.2"/>
+      <path d="M 283 83 L 295 77 L 307 83 L 295 89 Z M 287 87 L 287 93 C 287 95 291 97 295 97 C 299 97 303 95 303 93 L 303 87" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+  </g>
+
+  <!-- BOTTOM DETAILED INFOGRAPHIC STRIP -->
+  <g transform="translate(60, 410)">
+    <rect width="1080" height="170" rx="16" fill="#0b172a" stroke="#1e293b" stroke-width="1.2"/>
+    
+    <!-- Title of footer block -->
+    <text x="25" y="32" fill="#f8fafc" font-size="13" font-weight="700" letter-spacing="0.5">
+      PETA STRATEGIS: DARI LITERASI MASYARAKAT KE KOMERSIALISASI KEKAYAAN INTELEKTUAL
+    </text>
+
+    <!-- 4 Step Connectors -->
+    <g transform="translate(25, 55)">
+      
+      <!-- Step 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="235" height="90" rx="10" fill="#08101e" stroke="#1e3a8a" stroke-width="1"/>
+        <text x="14" y="24" fill="#60a5fa" font-size="11" font-weight="700">1. Masyarakat &amp; UMKM</text>
+        <text x="14" y="44" fill="#cbd5e1" font-size="11">Perlindungan bentuk unik</text>
+        <text x="14" y="62" fill="#94a3b8" font-size="10">Mencegah plagiarisme kemasan &amp; perabotan lokal.</text>
+      </g>
+
+      <!-- Arrow 1 -->
+      <path d="M 245 45 L 265 45" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Step 2 -->
+      <g transform="translate(275, 0)">
+        <rect width="235" height="90" rx="10" fill="#08101e" stroke="#047857" stroke-width="1"/>
+        <text x="14" y="24" fill="#34d399" font-size="11" font-weight="700">2. Pelaku Usaha &amp; Industri</text>
+        <text x="14" y="44" fill="#cbd5e1" font-size="11">Monopoli hak 10-25 tahun</text>
+        <text x="14" y="62" fill="#94a3b8" font-size="10">Aset tak berwujud, lisensi royalti &amp; agunan perbankan.</text>
+      </g>
+
+      <!-- Arrow 2 -->
+      <path d="M 520 45 L 540 45" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Step 3 -->
+      <g transform="translate(550, 0)">
+        <rect width="235" height="90" rx="10" fill="#08101e" stroke="#b45309" stroke-width="1"/>
+        <text x="14" y="24" fill="#fbbf24" font-size="11" font-weight="700">3. Dosen &amp; Peneliti</text>
+        <text x="14" y="44" fill="#cbd5e1" font-size="11">Kredit 15 Kum + Hilirisasi</text>
+        <text x="14" y="62" fill="#94a3b8" font-size="10">Karya nyata prototipe tidak berhenti di lemari arsip.</text>
+      </g>
+
+      <!-- Arrow 3 -->
+      <path d="M 795 45 L 815 45" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Step 4 -->
+      <g transform="translate(825, 0)">
+        <rect width="205" height="90" rx="10" fill="#131b2e" stroke="#6366f1" stroke-width="1"/>
+        <text x="14" y="24" fill="#a5b4fc" font-size="11" font-weight="700">4. Ekosistem RUU 2026</text>
+        <text x="14" y="44" fill="#cbd5e1" font-size="11">Harmonisasi Global</text>
+        <text x="14" y="62" fill="#94a3b8" font-size="10">Pemberlakuan grace period 12 bulan &amp; partial designs.</text>
+      </g>
+
+    </g>
+
+  </g>
+
+  <!-- Bottom Brand Mark -->
+  <g transform="translate(60, 615)">
+    <text x="0" y="18" fill="#475569" font-size="12" font-mono="true">
+      IDE INDONESIA &#8226; REGULASI GLOBAL &amp; KEBIJAKAN HUKUM KEKAYAAN INTELEKTUAL &#8226; OLEH ARIF REZA BASIRUN
+    </text>
+  </g>
+</svg>

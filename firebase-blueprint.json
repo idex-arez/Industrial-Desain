@@ -1,0 +1,198 @@
+{
+  "entities": {
+    "Article": {
+      "title": "Article",
+      "description": "Kajian dan artikel publikasi desain industri dan rekayasa",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Pengenal unik artikel"
+        },
+        "title": {
+          "type": "string",
+          "description": "Judul lengkap artikel",
+          "maxLength": 255
+        },
+        "tabCategory": {
+          "type": "string",
+          "description": "Kategori tab utama (desain-industri atau additive-manufacturing)",
+          "maxLength": 64
+        },
+        "date": {
+          "type": "string",
+          "description": "Tanggal rilis artikel",
+          "maxLength": 64
+        },
+        "category": {
+          "type": "string",
+          "description": "Sub-kategori atau badge artikel",
+          "maxLength": 64
+        },
+        "readTime": {
+          "type": "string",
+          "description": "Estimasi waktu baca",
+          "maxLength": 32
+        },
+        "thumbnail": {
+          "type": "string",
+          "description": "URL atau data gambar sampul",
+          "maxLength": 500000
+        },
+        "lead": {
+          "type": "string",
+          "description": "Kutipan pengantar artikel",
+          "maxLength": 500
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "Ringkasan cuplikan untuk kartu artikel",
+          "maxLength": 1000
+        },
+        "bodyHtml": {
+          "type": "string",
+          "description": "Isi lengkap artikel berformat HTML dan grafik"
+        }
+      },
+      "required": ["id", "title", "tabCategory", "category", "bodyHtml"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Tanggapan riil dari pembaca artikel",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Pengenal unik komentar"
+        },
+        "edition": {
+          "type": "string",
+          "description": "ID artikel yang dikomentari",
+          "maxLength": 128
+        },
+        "author": {
+          "type": "string",
+          "description": "Nama pengirim komentar",
+          "maxLength": 128
+        },
+        "role": {
+          "type": "string",
+          "description": "Profesi atau peran pengirim",
+          "maxLength": 128
+        },
+        "content": {
+          "type": "string",
+          "description": "Isi komentar",
+          "maxLength": 2000
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Waktu pengiriman komentar",
+          "maxLength": 64
+        }
+      },
+      "required": ["id", "edition", "author", "content"]
+    },
+    "PostView": {
+      "title": "PostView",
+      "description": "Penghitung tayangan riil artikel",
+      "type": "object",
+      "properties": {
+        "postId": {
+          "type": "string",
+          "description": "ID artikel"
+        },
+        "views": {
+          "type": "number",
+          "description": "Jumlah tayangan riil"
+        }
+      },
+      "required": ["postId", "views"]
+    },
+    "Portfolio": {
+      "title": "Portfolio",
+      "description": "Koleksi karya desain 2D, 3D CAD modeling, dan produk fisik manufaktur aditif",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Pengenal unik karya"
+        },
+        "title": {
+          "type": "string",
+          "description": "Judul karya portofolio",
+          "maxLength": 255
+        },
+        "category": {
+          "type": "string",
+          "description": "Kategori karya (2d, 3d, produk)",
+          "maxLength": 64
+        },
+        "categoryLabel": {
+          "type": "string",
+          "description": "Label kategori",
+          "maxLength": 64
+        },
+        "year": {
+          "type": "string",
+          "description": "Tahun riset atau pembuatan",
+          "maxLength": 32
+        },
+        "thumbnail": {
+          "type": "string",
+          "description": "URL atau path gambar karya",
+          "maxLength": 500000
+        },
+        "type": {
+          "type": "string",
+          "description": "Tipe format karya",
+          "maxLength": 128
+        },
+        "software": {
+          "type": "string",
+          "description": "Perangkat lunak atau alat yang digunakan",
+          "maxLength": 128
+        },
+        "status": {
+          "type": "string",
+          "description": "Status HKI atau legalitas",
+          "maxLength": 128
+        },
+        "description": {
+          "type": "string",
+          "description": "Deskripsi konsep desain",
+          "maxLength": 2000
+        },
+        "engineering": {
+          "type": "string",
+          "description": "Spesifikasi rekayasa teknis",
+          "maxLength": 2000
+        },
+        "modelKey": {
+          "type": "string",
+          "description": "Kunci model 3D Three.js opsional",
+          "maxLength": 64
+        }
+      },
+      "required": ["id", "title", "category", "description"]
+    }
+  },
+  "firestore": {
+    "/articles/{articleId}": {
+      "schema": "Article",
+      "description": "Koleksi dokumen artikel desain industri dan manufaktur aditif"
+    },
+    "/comments/{commentId}": {
+      "schema": "Comment",
+      "description": "Koleksi tanggapan riil pembaca artikel"
+    },
+    "/views/{postId}": {
+      "schema": "PostView",
+      "description": "Koleksi statistik tayangan riil per artikel"
+    },
+    "/portfolios/{portfolioId}": {
+      "schema": "Portfolio",
+      "description": "Koleksi data karya portofolio desain 2D, 3D dan produk fisik"
+    }
+  }
+}

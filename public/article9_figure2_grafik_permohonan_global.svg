@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="djkiBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <filter id="cardShadow9" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Canvas Background -->
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="627" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow9)"/>
+
+  <!-- TOP HEADER -->
+  <g transform="translate(60, 58)">
+    <rect width="250" height="28" rx="6" fill="#e0f2fe"/>
+    <text x="12" y="19" fill="#0369a1" font-size="11" font-weight="800" font-mono="true" letter-spacing="1">
+      GAMBAR 2 &#8226; STATISTIK GLOBAL WIPO &amp; DJKI
+    </text>
+
+    <text x="0" y="60" fill="#0f172a" font-size="28" font-weight="800" letter-spacing="-0.5">
+      Volume Permohonan Desain Industri Dunia &amp; Indonesia (2024)
+    </text>
+    <text x="0" y="86" fill="#64748b" font-size="14" font-weight="500">
+      Perbandingan Kantor HKI Terbesar Dunia serta Posisi Pertumbuhan Agresif DJKI Kementerian Hukum RI
+    </text>
+  </g>
+
+  <!-- LEFT: HORIZONTAL BAR CHART (6 Countries) -->
+  <g transform="translate(60, 170)">
+    <rect width="680" height="415" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2" filter="url(#cardShadow9)"/>
+
+    <!-- Row 1: Tiongkok (CNIPA) -->
+    <g transform="translate(25, 24)">
+      <text x="0" y="14" fill="#0f172a" font-size="13" font-weight="700">1. Tiongkok (CNIPA)</text>
+      <text x="630" y="14" fill="#0f172a" font-size="13" font-weight="800" font-mono="true" text-anchor="end">825.330 desain</text>
+      <rect x="0" y="22" width="630" height="20" rx="6" fill="#f1f5f9"/>
+      <rect x="0" y="22" width="630" height="20" rx="6" fill="#475569"/>
+    </g>
+
+    <!-- Row 2: Uni Eropa (EUIPO) -->
+    <g transform="translate(25, 88)">
+      <text x="0" y="14" fill="#0f172a" font-size="13" font-weight="700">2. Uni Eropa (EUIPO)</text>
+      <text x="630" y="14" fill="#0f172a" font-size="13" font-weight="800" font-mono="true" text-anchor="end">123.743 desain</text>
+      <rect x="0" y="22" width="630" height="20" rx="6" fill="#f1f5f9"/>
+      <rect x="0" y="22" width="180" height="20" rx="6" fill="#64748b"/>
+    </g>
+
+    <!-- Row 3: Inggris (UKIPO) -->
+    <g transform="translate(25, 152)">
+      <text x="0" y="14" fill="#0f172a" font-size="13" font-weight="700">3. Inggris (UKIPO)</text>
+      <text x="630" y="14" fill="#0f172a" font-size="13" font-weight="800" font-mono="true" text-anchor="end">78.567 desain</text>
+      <rect x="0" y="22" width="630" height="20" rx="6" fill="#f1f5f9"/>
+      <rect x="0" y="22" width="135" height="20" rx="6" fill="#94a3b8"/>
+    </g>
+
+    <!-- Row 4: Amerika Serikat (USPTO) -->
+    <g transform="translate(25, 216)">
+      <text x="0" y="14" fill="#0f172a" font-size="13" font-weight="700">4. Amerika Serikat (USPTO)</text>
+      <text x="630" y="14" fill="#0f172a" font-size="13" font-weight="800" font-mono="true" text-anchor="end">68.575 desain</text>
+      <rect x="0" y="22" width="630" height="20" rx="6" fill="#f1f5f9"/>
+      <rect x="0" y="22" width="120" height="20" rx="6" fill="#94a3b8"/>
+    </g>
+
+    <!-- Row 5: Korea Selatan (KIPO) -->
+    <g transform="translate(25, 280)">
+      <text x="0" y="14" fill="#0f172a" font-size="13" font-weight="700">5. Korea Selatan (KIPO)</text>
+      <text x="630" y="14" fill="#0f172a" font-size="13" font-weight="800" font-mono="true" text-anchor="end">60.683 desain</text>
+      <rect x="0" y="22" width="630" height="20" rx="6" fill="#f1f5f9"/>
+      <rect x="0" y="22" width="105" height="20" rx="6" fill="#94a3b8"/>
+    </g>
+
+    <!-- Row 6: Indonesia (DJKI) - HIGHLIGHTED -->
+    <g transform="translate(25, 340)">
+      <rect x="-10" y="-8" width="650" height="64" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2"/>
+      <text x="6" y="16" fill="#0369a1" font-size="13" font-weight="800">6. Indonesia (DJKI Kemenkumham RI)</text>
+      <text x="630" y="16" fill="#0284c7" font-size="14" font-weight="900" font-mono="true" text-anchor="end">7.926 permohonan</text>
+      <rect x="6" y="26" width="624" height="20" rx="6" fill="#e0f2fe"/>
+      <rect x="6" y="26" width="95" height="20" rx="6" fill="url(#djkiBarGrad)"/>
+      <text x="110" y="41" fill="#0369a1" font-size="11" font-weight="700">+37,3% Pertumbuhan (Rekor Tertinggi WIPO)</text>
+    </g>
+
+  </g>
+
+  <!-- RIGHT: 3 KEY INSIGHT SUMMARY METRIC CARDS -->
+  <g transform="translate(765, 170)">
+
+    <!-- CARD A: Pertumbuhan Nasional -->
+    <g transform="translate(0, 0)">
+      <rect width="375" height="125" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2" filter="url(#cardShadow9)"/>
+      <text x="20" y="26" fill="#15803d" font-size="10.5" font-weight="800" font-mono="true" letter-spacing="1">PERTUMBUHAN NASIONAL RI</text>
+      <text x="20" y="66" fill="#166534" font-size="34" font-weight="900" font-mono="true">+77%</text>
+      <text x="145" y="52" fill="#15803d" font-size="12" font-weight="700">Lompatan 3 Tahun</text>
+      <text x="145" y="70" fill="#4b5563" font-size="11">Dari 4.875 (2022) &#8594; 8.649 (2025)</text>
+      <text x="20" y="104" fill="#166534" font-size="10.5" font-weight="600">75% pendaftar berasal dari inovator domestik</text>
+    </g>
+
+    <!-- CARD B: Percepatan Layanan Kilat -->
+    <g transform="translate(0, 145)">
+      <rect width="375" height="125" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.2" filter="url(#cardShadow9)"/>
+      <text x="20" y="26" fill="#0369a1" font-size="10.5" font-weight="800" font-mono="true" letter-spacing="1">DJKI REFORMASI BIROKRASI</text>
+      <text x="20" y="66" fill="#0284c7" font-size="34" font-weight="900" font-mono="true">4 BULAN</text>
+      <text x="180" y="52" fill="#0369a1" font-size="12" font-weight="700">Layanan Kilat</text>
+      <text x="180" y="70" fill="#4b5563" font-size="11">Pemeriksaan Substantif Cepat</text>
+      <text x="20" y="104" fill="#0369a1" font-size="10.5" font-weight="600">Memberi kepastian komersial bagi dunia usaha</text>
+    </g>
+
+    <!-- CARD C: Angka Kredit Dosen -->
+    <g transform="translate(0, 290)">
+      <rect width="375" height="125" rx="14" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2" filter="url(#cardShadow9)"/>
+      <text x="20" y="26" fill="#b45309" font-size="10.5" font-weight="800" font-mono="true" letter-spacing="1">HILIRISASI RISET &amp; DOSEN</text>
+      <text x="20" y="66" fill="#d97706" font-size="34" font-weight="900" font-mono="true">+15 KUM</text>
+      <text x="165" y="52" fill="#b45309" font-size="12" font-weight="700">Kredit Jabatan Dosen</text>
+      <text x="165" y="70" fill="#4b5563" font-size="11">Kepmen 209/P &amp; PermenPANRB 14</text>
+      <text x="20" y="104" fill="#b45309" font-size="10.5" font-weight="600">Insentif prototipe desain agar tidak mangkrak</text>
+    </g>
+
+  </g>
+
+  <!-- FOOTER SOURCE NOTE -->
+  <g transform="translate(60, 615)">
+    <text x="0" y="16" fill="#94a3b8" font-size="11" font-mono="true">
+      Sumber Data: WIPO World Intellectual Property Indicators [22] &amp; Laporan Kinerja DJKI Kementerian Hukum RI [23][24] &#8226; IDE Indonesia
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemeriksaan Substantif Kebaruan Desain Industri — IDE Indonesia</title>
+  <meta name="description" content="IDE Indonesia (Industrial Design Examiner) — Monograf kajian yuridis dan estetika karya Areza seputar bentuk 3D, konfigurasi tata letak, komposisi garis, dan warna berdasarkan UU 31/2000 dan WIPO Hague.">
+  <meta property="og:title" content="Pemeriksaan Substantif Kebaruan Desain Industri — IDE Indonesia">
+  <meta property="og:description" content="Kajian komprehensif empat elemen pokok desain industri dan pengujian kebaruan objektif oleh Areza (IDE Indonesia).">
+  <meta property="og:type" content="article">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./logo.svg">
+
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Humanist Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF8F5',
+            paperElevated: '#FFFFFF',
+            paperWarm: '#F3EFE8',
+            ink: '#191E28',
+            inkMuted: '#5C6577',
+            inkSubtle: '#8C95A6',
+            line: '#E7E2D9',
+            brandNavy: '#0C2340',
+            brandGold: '#D97706',
+            brandGoldSoft: '#FEF3C7',
+            brandGoldDark: '#B45309'
+          },
+          fontFamily: {
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #FAF8F5;
+      color: #191E28;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-editorial {
+      font-family: 'Newsreader', Georgia, serif;
+    }
+    .drop-cap::first-letter {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 4rem;
+      line-height: 0.85;
+      font-weight: 600;
+      float: left;
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+      color: #0C2340;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF8F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8D2C7;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B8B0A2;
+    }
+    .toc-item.active {
+      color: #0C2340;
+      font-weight: 600;
+      border-left-color: #D97706;
+      background-color: #F3EFE8;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-paper text-ink selection:bg-brandGoldSoft selection:text-brandNavy">
+
+  <!-- TOP MASTHEAD TICKER -->
+  <div class="border-b border-line bg-paperWarm/60 px-4 sm:px-8 py-2 text-xs text-inkMuted flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <span class="font-bold text-brandNavy tracking-wide">IDE INDONESIA</span>
+      <span aria-hidden="true" class="text-line">·</span>
+      <span>MONOGRAF KAJIAN RESMI</span>
+      <span aria-hidden="true" class="text-line">·</span>
+      <span>DOKUMEN RUJUKAN PEMERIKSA DESAIN INDUSTRI</span>
+      <span aria-hidden="true" class="text-line">·</span>
+      <span class="hidden md:inline">REF: DI-MONOGRAF-2026</span>
+    </div>
+    <div class="flex items-center gap-3 text-[11px] text-inkSubtle">
+      <a href="index.html" class="hover:text-brandNavy transition-colors flex items-center gap-1">
+        <i data-lucide="arrow-left" class="w-3 h-3"></i>
+        <span>Kembali ke Beranda IDE Indonesia</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-line">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-8">
+
+        <!-- Official Brand Logo with IDE Indonesia Lockup -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 group focus:outline-none">
+          <img src="/logo.svg" alt="IDE Indonesia — Industrial Design Examiner" class="h-10 sm:h-12 w-auto object-contain transition-opacity group-hover:opacity-90">
+          <div class="flex flex-col">
+            <span class="font-serif-editorial font-bold text-lg text-brandNavy tracking-tight leading-none">IDE Indonesia</span>
+            <span class="text-[9px] text-inkSubtle tracking-widest uppercase font-sans mt-1">Industrial Design Examiner</span>
+          </div>
+        </a>
+
+        <!-- Breadcrumb / Reading Context -->
+        <div class="hidden md:flex items-center gap-2 text-xs text-inkMuted truncate max-w-md">
+          <a href="index.html" class="hover:text-brandNavy transition-colors">Beranda</a>
+          <span class="text-line">/</span>
+          <span class="text-brandNavy font-medium truncate">Pemeriksaan Substantif 4 Elemen Desain Industri</span>
+        </div>
+
+        <!-- Quick Nav Buttons (Comments & Back) -->
+        <div class="flex items-center gap-2">
+          <a
+            href="index.html#kolom-komentar"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-brandNavy bg-paperElevated border border-line rounded-md hover:bg-paperWarm transition-colors"
+            title="Buka Kolom Komentar & Diskusi Ilmiah"
+          >
+            <i data-lucide="message-square" class="w-3.5 h-3.5 text-brandGoldDark"></i>
+            <span class="hidden sm:inline">Kolom Komentar</span>
+          </a>
+          <a
+            href="index.html"
+            class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-brandNavy bg-paperElevated border border-line rounded-md hover:bg-paperWarm transition-colors"
+          >
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+            <span>Indeks Buletin</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN ARTICLE CONTAINER -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-12">
+
+    <!-- ARTICLE HEADER (Magazine Lead Style) -->
+    <header class="space-y-6 max-w-4xl pb-8 border-b border-line">
+      <div class="flex items-center gap-2 text-xs text-inkMuted uppercase tracking-wider font-medium">
+        <span class="text-brandGoldDark font-semibold">Monograf Ilmiah</span>
+        <span aria-hidden="true">·</span>
+        <span>Hukum Desain Industri</span>
+        <span aria-hidden="true">·</span>
+        <span>14 Menit Waktu Pembacaan</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-serif-editorial font-medium text-brandNavy tracking-tight leading-[1.14]">
+        Pemeriksaan Substantif Kebaruan Desain Industri: Telaah Yuridis dan Estetika terhadap Bentuk, Konfigurasi, Garis, dan Warna
+      </h1>
+
+      <p class="text-lg sm:text-xl font-serif-editorial italic text-inkMuted leading-relaxed">
+        Analisis mendalam mengenai empat pilar konstitutif hak desain industri berdasarkan Pasal 1 angka 1 UU No. 31 Tahun 2000, traktat WIPO Hague System, dan yurisprudensi internasional pengujian kebaruan oleh Pengguna Berpengetahuan.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 pt-3 text-xs text-inkMuted border-t border-line">
+        <span class="font-semibold text-brandNavy">Disusun oleh Areza (IDE Indonesia)</span>
+        <span aria-hidden="true">·</span>
+        <span>Korespondensi: arif.reza.djki@gmail.com</span>
+        <span aria-hidden="true">·</span>
+        <span>Rujukan: UU RI No. 31/2000 &amp; WIPO Hague</span>
+      </div>
+
+      <!-- Rekomendasi Publikasi Terbaru -->
+      <div class="mt-4 p-4 rounded-lg bg-amber-50/90 border border-amber-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded bg-brandNavy text-brandGold font-bold flex items-center justify-center text-xs shrink-0 shadow-2xs">BARU</span>
+          <div>
+            <strong class="text-brandNavy block font-bold text-xs sm:text-sm">Publikasi Terkini: Desain Industri di Dunia &amp; Indonesia</strong>
+            <span class="text-inkMuted text-[11px]">Membedah Sistem Hague WIPO, percepatan DJKI 4 bulan, RUU Desain Industri, serta angka kredit dosen 15 kum.</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a
+            href="desain-industri-dunia-dan-indonesia.html"
+            class="px-3 py-1.5 rounded bg-brandNavy text-white font-semibold text-xs hover:bg-brandNavyDark transition-colors inline-flex items-center gap-1 shadow-2xs"
+          >
+            <span>Baca Naskah</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <a
+            href="/assets/aistudio/Desain-Industri-di-Dunia-dan-Indonesia_af94bc23.pdf"
+            target="_blank"
+            download
+            class="px-3 py-1.5 rounded bg-white text-brandNavy border border-gray-300 font-semibold text-xs hover:bg-gray-50 transition-colors inline-flex items-center gap-1 shadow-2xs"
+          >
+            <i data-lucide="download" class="w-3.5 h-3.5 text-brandGold"></i>
+            <span>PDF</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- TWO-COLUMN EDITORIAL ARTICLE LAYOUT (25% Sticky Nav / 75% Reading Body) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+      <!-- STICKY TABLE OF CONTENTS (Left Column) -->
+      <aside class="lg:col-span-3 lg:sticky lg:top-28 space-y-5">
+        <div class="p-5 bg-paperElevated border border-line rounded-lg space-y-3">
+          <div class="text-xs font-semibold uppercase tracking-wider text-brandNavy pb-2 border-b border-line flex items-center justify-between">
+            <span>Daftar Isi Monograf</span>
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-brandGoldDark"></i>
+          </div>
+
+          <nav class="space-y-1 text-xs text-inkMuted">
+            <a href="#bab-1" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              1. Landasan Yuridis 4 Elemen
+            </a>
+            <a href="#bab-2" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              2. Anatomi Bentuk (Shape) 3D
+            </a>
+            <a href="#bab-3" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              3. Anatomi Konfigurasi Spasial
+            </a>
+            <a href="#bab-4" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              4. Komposisi Garis &amp; Pola
+            </a>
+            <a href="#bab-5" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              5. Komposisi Warna &amp; CMF
+            </a>
+            <a href="#bab-6" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              6. Teori Kebaruan Visual (Diklat)
+            </a>
+            <a href="#bab-7" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              7. 3D Print &amp; R&amp;D Produksi Massal
+            </a>
+            <a href="#bab-8" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              8. Uji Kebaruan &amp; Informed User
+            </a>
+            <a href="#bab-9" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              9. Matriks Komparasi 4 Elemen
+            </a>
+            <a href="#bab-10" class="toc-item block px-2.5 py-1.5 border-l-2 border-transparent hover:text-brandNavy transition-colors rounded-r">
+              10. Daftar Pustaka Otoritatif
+            </a>
+          </nav>
+        </div>
+
+        <div class="p-4 bg-paperWarm/50 rounded-lg border border-line text-xs text-inkMuted space-y-2 hidden lg:block">
+          <span class="font-semibold text-brandNavy block text-[11px] uppercase tracking-wider">Kutipan Pasal Inti:</span>
+          <p class="italic text-[11px] leading-relaxed text-[#3B4556]">
+            &ldquo;Desain Industri dianggap baru apabila pada Tanggal Penerimaan tidak sama dengan pengungkapan yang telah ada sebelumnya.&rdquo;
+          </p>
+          <span class="text-[10px] text-inkSubtle block">— Pasal 2 ayat (2) UU 31/2000</span>
+        </div>
+      </aside>
+
+      <!-- MAIN PROSE (Right Column) -->
+      <article class="lg:col-span-9 space-y-12 text-[#2C3444] leading-relaxed">
+
+        <!-- BAB 1 -->
+        <section id="bab-1" class="space-y-4">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 01</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Landasan Yuridis dan Definisi Statutory 4 Elemen Pokok
+            </h2>
+          </div>
+
+          <p class="drop-cap text-base sm:text-lg leading-relaxed">
+            Dalam khazanah hukum kekayaan intelektual modern, Desain Industri memegang kedudukan istimewa yang menjembatani seni murni dengan produksi massal industri. Jika hukum Paten melindungi invensi teknologi yang memecahkan persoalan praktis, dan hukum Merek melindungi reputasi asal barang, maka Desain Industri secara khusus mengawal estetika rupa kasat mata.
+          </p>
+
+          <p class="text-base leading-relaxed">
+            Di Indonesia, kepastian hukum ini ditegakkan melalui <strong>Pasal 1 angka 1 Undang-Undang No. 31 Tahun 2000 tentang Desain Industri</strong>:
+          </p>
+
+          <blockquote class="my-6 p-6 bg-paperElevated border border-line rounded-lg font-serif-editorial italic text-lg text-brandNavy leading-relaxed">
+            &ldquo;Desain Industri adalah suatu kreasi tentang <strong>bentuk</strong>, <strong>konfigurasi</strong>, atau <strong>komposisi garis</strong> atau <strong>warna</strong>, atau <strong>garis dan warna</strong>, atau <strong>gabungan daripadanya</strong> yang berbentuk tiga dimensi atau dua dimensi yang memberikan kesan estetis dan dapat diwujudkan dalam pola tiga dimensi atau dua dimensi serta dapat dipakai untuk menghasilkan suatu produk, barang, komoditas industri, atau kerajinan tangan.&rdquo;
+          </blockquote>
+
+          <p class="text-base leading-relaxed">
+            Klausul tersebut mengukuhkan bahwa perlindungan desain industri bukan monopoli acak, melainkan hak eksklusif yang bertumpu pada empat perwujudan visual yang nyata dan terukur.
+          </p>
+        </section>
+
+        <!-- BAB 2 -->
+        <section id="bab-2" class="space-y-4 pt-4">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 02</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Anatomi Elemen Bentuk (Shape) 3D: Kurvatur, Siluet, dan Doktrin Fungsional
+            </h2>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Bentuk (shape) adalah wujud fisik tiga dimensi yang memiliki massa, volume, panjang, lebar, dan tinggi. Dalam proses pemeriksaan substantif di DJKI maupun kantor paten internasional seperti EUIPO dan USPTO, penilaian bentuk bertumpu pada dua sumbu evaluasi:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-2 text-sm text-inkMuted">
+            <li><strong>Siluet dan Profil Kontur:</strong> Garis tepi terluar yang tampak saat produk diamati dari berbagai sudut proyeksi (perspektif, tampak depan, atas, dan samping).</li>
+            <li><strong>Kelengkungan Permukaan (Surface Curvature):</strong> Transisi antara bidang datar dan bidang melengkung, seperti kemulusan kurva kontinu yang membentuk gaya khas produk.</li>
+          </ul>
+
+          <div class="p-5 bg-paperWarm/60 border border-line rounded-lg space-y-2 text-sm">
+            <span class="font-semibold text-brandNavy block font-serif-editorial text-base">Doktrin Pembatasan: Bentuk Fungsional Teknis (Pasal 4)</span>
+            <p class="text-xs text-inkMuted leading-relaxed">
+              Pasal 4 UU No. 31 Tahun 2000 secara tegas melarang pemberian hak desain industri terhadap bentuk yang semata-mata ditentukan oleh fungsi teknis. Jika sebuah bentuk dibuat semata-mata agar pas dengan komponen lain (seperti gerigi roda gigi mekanis atau pin steker listrik), maka bentuk tersebut berada di ranah paten atau domain publik dan tidak boleh dimonopoli melalui desain industri.
+            </p>
+          </div>
+        </section>
+
+        <!-- BAB 3 -->
+        <section id="bab-3" class="space-y-4 pt-4">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 03</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Anatomi Elemen Konfigurasi: Relasi Spasial Antar-Komponen
+            </h2>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Perbedaan antara <em>bentuk</em> dan <em>konfigurasi</em> sering kali menjadi perdebatan menarik dalam persidangan niaga. Jika bentuk merujuk pada kontur luar dari satu benda tunggal, maka <strong>konfigurasi (configuration)</strong> merujuk pada penataan spasial, susunan, atau relasi perletakan dari beberapa komponen yang membentuk satu produk utuh.
+          </p>
+
+          <p class="text-base leading-relaxed">
+            Sebagai contoh nyata, perhatikan modul kamera pada punggung ponsel pintar. Lingkaran lensa kamera dan lampu kilat adalah bentuk geometri yang sudah ada sejak dahulu kala. Namun, penataan letak tiga lingkaran dalam formasi segitiga asimetris dengan jarak proporsional tertentu di dalam bingkai kaca sudut kiri atas merupakan sebuah kreasi <em>konfigurasi</em> yang memiliki kebaruan estetis.
+          </p>
+
+          <p class="text-base leading-relaxed">
+            Pemeriksa Desain Industri akan memeriksa apakah relasi penataan tersebut menghasilkan kesan visual yang berbeda nyata dibandingkan dengan susunan komponen yang telah ada pada basis data seni terapan terdahulu (prior art).
+          </p>
+        </section>
+
+        <!-- BAB 4 -->
+        <section id="bab-4" class="space-y-4 pt-4">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 04</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Komposisi Garis: Irama Linier 2 Dimensi dan Tekstur Rusuk 3 Dimensi
+            </h2>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Garis adalah elemen ekspresi yang sangat kuat. Dalam hukum desain industri, <strong>komposisi garis</strong> dapat diwujudkan dalam dua bentuk utama:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1.5">
+              <span class="font-semibold text-brandNavy text-sm block">1. Ornamen Garis Dua Dimensi (2D)</span>
+              <p class="text-inkMuted leading-relaxed">
+                Pola grafis garis sejajar (pinstripe), anyaman geometris pada ubin keramik, motif batik garis, atau pola sablon linier pada kain tekstil dan kemasan produk.
+              </p>
+            </div>
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1.5">
+              <span class="font-semibold text-brandNavy text-sm block">2. Tekstur Garis Tiga Dimensi (3D Ribbing)</span>
+              <p class="text-inkMuted leading-relaxed">
+                Pola rusuk timbul paralel pada koper perjalanan aluminium, alur striasi pada pegangan alat tulis, atau sirip dekoratif pada grille depan kendaraan bermotor.
+              </p>
+            </div>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Kunci pengujian komposisi garis terletak pada kata <em>&ldquo;komposisi&rdquo;</em>, yang mensyaratkan adanya susunan teratur atau ritme berulang. Satu garis lurus tunggal tanpa konteks dekoratif tidak dianggap sebagai komposisi yang layak mendapatkan hak monopoli.
+          </p>
+        </section>
+
+        <!-- BAB 5 -->
+        <section id="bab-5" class="space-y-4 pt-4">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 05</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Komposisi Warna dan CMF: Mengapa Hukum Menolak Monopoli Warna Tunggal
+            </h2>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Salah satu pertanyaan yang paling sering muncul dari para pemohon pendaftaran desain adalah: <em>&ldquo;Bisakah saya mendaftarkan warna merah pada botol saya?&rdquo;</em>
+          </p>
+
+          <p class="text-base leading-relaxed">
+            Jawabannya adalah <strong>tidak</strong>, jika warna tersebut diajukan sebagai warna tunggal yang berdiri sendiri tanpa komposisi. Undang-Undang No. 31 Tahun 2000 mensyaratkan frasa &ldquo;komposisi warna&rdquo;, yang berarti perpaduan atau kombinasi dari setidaknya dua warna atau lebih.
+          </p>
+
+          <div class="p-5 bg-paperWarm/60 border border-line rounded-lg space-y-2 text-sm">
+            <span class="font-semibold text-brandNavy block font-serif-editorial text-base">Alasan Filosofis Penolakan Warna Tunggal</span>
+            <p class="text-xs text-inkMuted leading-relaxed">
+              Spektrum warna di alam semesta sangat terbatas. Jika seorang pengusaha diizinkan memonopoli satu warna tunggal pada produk komoditas tertentu, maka persaingan usaha yang sehat akan lumpuh karena pengusaha lain tidak dapat lagi menggunakan warna tersebut. Warna hanya dilindungi apabila dipadukan dalam komposisi kontras (seperti skema dual-tone) atau zonasi warna yang teratur dan terikat pada bentuk produk.
+            </p>
+          </div>
+        </section>
+
+        <!-- BAB 6: TEORI KEBARUAN VISUAL & PENGUKURANNYA (Materi Diklat DJKI) -->
+        <section id="bab-6" class="space-y-6 pt-4">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 06</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Teori Kebaruan Visual dan Pendekatan Pengukurannya
+            </h2>
+          </div>
+
+          <div class="p-4 bg-paperWarm/60 rounded border border-line text-xs text-inkMuted leading-relaxed space-y-1">
+            <span class="font-semibold text-brandNavy block text-[11px] uppercase tracking-wider">Sumber Kajian:</span>
+            <p>Disarikan dari materi <em>Persoalan Kebaruan Visual dan Pengukurannya</em> oleh Dr. Andry, M.Sn pada Kegiatan Peningkatan Pemahaman Bagi Jabatan Fungsional Pemeriksa Desain Industri DJKI Kementerian Hukum di Jakarta.</p>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Kebaruan visual bukanlah sekadar predikat abstrak atau klaim subjektif sepihak dari pendesain. Dalam keilmuan desain industri dan metodologi pemeriksaan kekayaan intelektual, kebaruan merupakan fungsi relasional: sejauh mana suatu artefak menyimpang dari artefak referensi dalam ruang desain kategori sejenis.
+          </p>
+
+          <!-- 1. Teori Formalisme -->
+          <div class="space-y-4 pt-2">
+            <h3 class="text-xl font-serif-editorial font-medium text-brandNavy">
+              1. Analisis Formalistik terhadap Kontur dan Massa Bentuk
+            </h3>
+            <p class="text-sm text-inkMuted leading-relaxed">
+              Teori formalisme membedah produk ke dalam <strong>unsur visual</strong> (titik, garis, bidang, massa/bentuk 3D, warna, dan tekstur) yang dikelompokkan ke dalam jenis <strong>organis</strong> (patah vs lengkung) atau <strong>geometris</strong> (persegi vs kurva). Unsur-unsur ini diatur dengan pola susunan tertentu (acak, teratur, analog, atau komplementer) untuk menghasilkan <strong>unsur perseptual</strong> berupa kesatuan, keselarasan, keseimbangan, arah dan gerak, serta irama visual.
+            </p>
+
+            <div class="rounded-lg overflow-hidden border border-line bg-white p-3 shadow-sm space-y-2">
+              <img
+                src="/setrika_morfologi.png"
+                alt="Analisis Formalistik Garis Kontur Setrika Listrik (Cosmos, Electrolux)"
+                class="w-full h-auto object-contain rounded"
+                loading="lazy">
+              <p class="text-xs text-inkSubtle italic">
+                Gambar: Analisis formalistik pertemuan garis punggung bodi, sudut kemiringan moncong, dan kurvatur pegangan pada setrika listrik (Cosmos, Electrolux) untuk mendeteksi kebaruan visual.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Teori GEON -->
+          <div class="space-y-4 pt-4">
+            <h3 class="text-xl font-serif-editorial font-medium text-brandNavy">
+              2. Teori GEON: Pengenalan Objek Melalui Komponen Primitif
+            </h3>
+            <p class="text-sm text-inkMuted leading-relaxed">
+              Merujuk teori <em>Recognition-by-Components</em> (RBC) yang dirumuskan Irving Biederman (1987), sistem kognisi manusia mengidentifikasi objek tiga dimensi melalui konfigurasi bagian-bagian geometris primitif yang invarian terhadap sudut pandang (*geons*).
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+              <div class="md:col-span-6 rounded-lg overflow-hidden border border-line bg-white p-4">
+                <img src="/geon_components.png" alt="Teori GEON dan Recognition-by-Components Biederman" class="w-full h-auto object-contain" loading="lazy">
+              </div>
+              <div class="md:col-span-6 space-y-3 text-xs text-inkMuted leading-relaxed">
+                <p>
+                  Objek seperti telepon, cangkir, tas koper, dan botol didekonstruksi ke dalam silinder, kerucut terpancung, balok, dan siku lengkung.
+                </p>
+                <div class="p-3 bg-paperElevated rounded border border-line">
+                  <strong class="text-brandNavy block text-xs mb-1">Aplikasi Pemeriksaan:</strong>
+                  Pemeriksa menguji apakah susunan atau morfologi geon yang diajukan pemohon menghasilkan struktur visual baru yang belum pernah muncul pada basis data seni terapan sebelumnya.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Prinsip MAYA -->
+          <div class="space-y-4 pt-4">
+            <h3 class="text-xl font-serif-editorial font-medium text-brandNavy">
+              3. Prinsip MAYA (Most Advanced, Yet Acceptable)
+            </h3>
+            <p class="text-sm text-inkMuted leading-relaxed">
+              Diformulasikan oleh Raymond Loewy serta divalidasi oleh Hekkert et al. (2003) dan Blijlevens et al. (2017): preferensi estetik manusia timbul dari titik temu antara sesuatu yang baru (*novel*) dengan sesuatu yang masih dikenali (*typical*). Desain yang terlalu radikal berisiko gagal dipahami, sementara desain yang terlalu tipikal kehilangan daya tarik kebaruan.
+            </p>
+
+            <div class="rounded-lg overflow-hidden border border-line bg-white p-3 shadow-sm space-y-2">
+              <img
+                src="/lampu_morfologi.png"
+                alt="Evolusi Morfologi Lampu Meja dalam Spektrum MAYA"
+                class="w-full h-auto object-contain rounded"
+                loading="lazy">
+              <p class="text-xs text-inkSubtle italic">
+                Gambar: Evolusi bentuk lampu meja yang bergerak dari tipikal kap mangkuk konvensional menuju inovasi cincin torus melingkar modern tanpa memutus fungsi dasarnya sebagai penerangan meja.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Dua Mazhab Pengukuran Kebaruan -->
+          <div class="space-y-4 pt-4">
+            <h3 class="text-xl font-serif-editorial font-medium text-brandNavy">
+              4. Mazhab Pengukuran: Penilaian Subjektif vs Objektif Komputasional
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-inkMuted leading-relaxed">
+              <div class="p-4 bg-paperElevated rounded-lg border border-line space-y-2">
+                <strong class="text-brandNavy block text-sm">Pendekatan Subjektif (Manusia):</strong>
+                <p>
+                  <strong>CAT (Consensual Assessment Technique):</strong> Gold standard Amabile (1982) dengan minimal 7 penilai pakar independen.
+                </p>
+                <p>
+                  <strong>CPSS (Creative Product Semantic Scale):</strong> O'Quin &amp; Besemer (1989) mengukur Novelty, Resolution, dan Elaboration. Contoh: Ferrari Luce (skor 6,4/7,0) vs Tesla Model S (skor 4,8/7,0).
+                </p>
+              </div>
+              <div class="p-4 bg-paperElevated rounded-lg border border-line space-y-2">
+                <strong class="text-brandNavy block text-sm">Pendekatan Objektif Komputasional:</strong>
+                <p>
+                  <strong>Divergensi Kullback-Leibler (KL):</strong> Menghitung perbedaan distribusi Gaussian curvature bentuk 3D antara acuan tipikal dan target baru (korelasi R&sup2; = 0,86 dengan persepsi manusia - Sasaki et al., 2022).
+                </p>
+                <p>
+                  <strong>Local Outlier Factor (LOF):</strong> Mendeteksi pencilan kerapatan semantik vektor untuk menyaring ide desain yang sangat unik secara otomatis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BAB 7: 3D PRINTING — REALISASI DESAIN, AKSELERASI R&D & JAMINAN PRODUKSI BERULANG -->
+        <section id="bab-7" class="space-y-6 pt-6 border-t border-line">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 07</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              3D Printing: Realisasi Desain, Akselerasi R&amp;D &amp; Jaminan Produksi Berulang (Mass Production)
+            </h2>
+          </div>
+
+          <div class="p-5 bg-paperWarm/60 border border-line rounded-lg space-y-2">
+            <span class="font-semibold text-brandNavy block text-xs uppercase tracking-wider">Mandat Yuridis Pasal 1 Angka 1 UU No. 31 Tahun 2000:</span>
+            <p class="font-serif-editorial italic text-base text-brandNavy leading-relaxed">
+              &ldquo;...dapat diwujudkan dalam pola tiga dimensi atau dua dimensi serta dapat dipakai untuk menghasilkan suatu produk, barang, komoditas industri, atau kerajinan tangan yang dapat diproduksi secara berulang.&rdquo;
+            </p>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Salah satu syarat konstitutif yang membedakan Desain Industri dari seni murni (Hak Cipta) adalah unsur <strong>manufakturabilitas dan reproduksibilitas massal (*repeatability*)</strong>. Sebuah gambar atau sketsa estetik di atas kertas tidak serta-merta memenuhi syarat desain industri jika wujud tersebut mustahil diproduksi secara berulang ratusan ribu unit dalam lini pabrik. Di sinilah teknologi pencetakan tiga dimensi (*additive manufacturing / 3D printing*) memegang peran sentral dalam praktik industri modern.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-inkMuted leading-relaxed">
+            <div class="p-4 bg-paperElevated rounded border border-line space-y-2">
+              <span class="font-bold text-brandNavy block text-sm">1. Realisasi Fisik Skala 1:1</span>
+              <p>
+                Mengubah representasi kurva digital CAD (NURBS) ke bentuk nyata untuk menguji proporsi, distribusi volume, dan stabilitas gravitasi secara taktil di tangan manusia, serta memverifikasi 7 tampak standar tanpa bias rendering layar komputer.
+              </p>
+            </div>
+            <div class="p-4 bg-paperElevated rounded border border-line space-y-2">
+              <span class="font-bold text-brandNavy block text-sm">2. Akselerasi Siklus R&amp;D</span>
+              <p>
+                Memangkas durasi riset dari minggu/bulan menjadi 4–12 jam per siklus. Desainer dapat mencetak 3 hingga 5 alternatif bentuk dan ergonomi dalam satu hari (*rapid physical A/B testing*) sebelum pembekuan desain (*design freeze*).
+              </p>
+            </div>
+            <div class="p-4 bg-paperElevated rounded border border-line space-y-2">
+              <span class="font-bold text-brandNavy block text-sm">3. Jaminan Produksi Massal (DFMA)</span>
+              <p>
+                Memvalidasi parameter cetakan injeksi plastik (*injection mold*): sudut kemiringan dinding 1&deg;–3&deg; (*draft angle*), lokasi garis pisah (*parting line*), ketebalan seragam (*uniform wall thickness*), serta toleransi sambungan (*snap-fit 0,2 mm*).
+              </p>
+            </div>
+          </div>
+
+          <div class="p-4 bg-paperWarm/50 rounded-lg border border-line text-xs text-inkMuted space-y-2">
+            <strong class="text-brandNavy block text-sm">Proteksi Finansial &amp; Mutu Manufaktur:</strong>
+            <p class="leading-relaxed">
+              Pembuatan cetakan perkakas baja permanen (*hard tooling mold*) bernilai ratusan juta hingga miliaran rupiah. Kesalahan desain bentuk atau undercut yang terlanjur dipotong pada cetakan baja akan mengakibatkan kerugian finansial yang sangat besar. Prototipe 3D print memberikan kepastian mutlak bahwa produk dapat diproduksi berulang kali (*mass production*) dengan kualitas yang identik tanpa deviasi bentuk.
+            </p>
+          </div>
+        </section>
+
+        <!-- BAB 8 -->
+        <section id="bab-8" class="space-y-4 pt-4 border-t border-line">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 08</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Metodologi Pengujian Kebaruan dan Standar Informed User
+            </h2>
+          </div>
+
+          <p class="text-base leading-relaxed">
+            Pasal 2 Undang-Undang No. 31 Tahun 2000 menegaskan bahwa hak desain industri hanya diberikan untuk desain yang <strong>baru</strong>. Desain dianggap baru apabila pada Tanggal Penerimaan, desain tersebut tidak sama dengan pengungkapan yang telah ada sebelumnya di seluruh dunia.
+          </p>
+
+          <p class="text-base leading-relaxed">
+            Dalam menguji kebaruan, Pemeriksa Desain Industri menerapkan tahapan metodologis sebagai berikut:
+          </p>
+
+          <ol class="list-decimal pl-5 space-y-3 text-sm text-inkMuted">
+            <li>
+              <strong>Penelusuran Prior Art:</strong> Menelusuri pangkalan data DJKI (PDKI) dan pangkalan data internasional WIPO Global Design Database berdasarkan Klasifikasi Locarno yang relevan.
+            </li>
+            <li>
+              <strong>Pemeriksaan Kesan Keseluruhan (Overall Impression Test):</strong> Menilai apakah perbedaan desain yang dimohonkan dengan desain terdahulu memberikan kesan estetis yang berbeda secara nyata bagi pengamat.
+            </li>
+            <li>
+              <strong>Kacamata Pengguna Berpengetahuan (Informed User):</strong> Penilaian tidak didasarkan pada pandangan ahli teknik yang mencari perbedaan mikroskopis, melainkan pada pandangan konsumen berpengetahuan yang memahami ragam produk di pasar tersebut.
+            </li>
+            <li>
+              <strong>Pemberian Masa Tenggang (Grace Period Pasal 5):</strong> Jika pendesain telah memamerkan karyanya dalam pameran resmi atau penelitian hingga 6 bulan sebelum tanggal penerimaan, pengungkapan tersebut tidak merusak kebaruan desainnya.
+            </li>
+          </ol>
+        </section>
+
+        <!-- BAB 9: MATRIKS KOMPARASI -->
+        <section id="bab-9" class="space-y-4 pt-4 border-t border-line">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 09</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Matriks Komparasi 4 Elemen Pokok Desain Industri
+            </h2>
+          </div>
+
+          <p class="text-sm text-inkMuted leading-relaxed">
+            Tabel ringkasan berikut merangkum batas yuridis, objek perlindungan, dan tolok ukur pengujian kebaruan untuk masing-masing elemen:
+          </p>
+
+          <div class="overflow-x-auto border border-line rounded-lg bg-paperElevated">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-paperWarm text-brandNavy border-b border-line">
+                <tr>
+                  <th class="p-3.5 font-semibold">Elemen Pokok</th>
+                  <th class="p-3.5 font-semibold">Dimensi</th>
+                  <th class="p-3.5 font-semibold">Fokus Perlindungan</th>
+                  <th class="p-3.5 font-semibold">Tolok Ukur Kebaruan</th>
+                  <th class="p-3.5 font-semibold">Pengecualian / Larangan</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-line text-inkMuted">
+                <tr class="hover:bg-paperWarm/30 transition-colors">
+                  <td class="p-3.5 font-semibold text-brandNavy">Bentuk (Shape)</td>
+                  <td class="p-3.5">3 Dimensi</td>
+                  <td class="p-3.5">Massa, volume, siluet, dan kontur kurvatur fisik</td>
+                  <td class="p-3.5">Siluet tampak luar &amp; proporsi kurva</td>
+                  <td class="p-3.5 text-red-700">Bentuk mekanis murni (Pasal 4)</td>
+                </tr>
+                <tr class="hover:bg-paperWarm/30 transition-colors">
+                  <td class="p-3.5 font-semibold text-brandNavy">Konfigurasi</td>
+                  <td class="p-3.5">3D / 2D Spasial</td>
+                  <td class="p-3.5">Tata letak &amp; relasi spasial antar-komponen</td>
+                  <td class="p-3.5">Distribusi khas susunan bagian</td>
+                  <td class="p-3.5 text-red-700">Susunan acak tanpa pola estetis</td>
+                </tr>
+                <tr class="hover:bg-paperWarm/30 transition-colors">
+                  <td class="p-3.5 font-semibold text-brandNavy">Komposisi Garis</td>
+                  <td class="p-3.5">2D &amp; 3D</td>
+                  <td class="p-3.5">Irama linier, striasi rusuk, pola ornamen</td>
+                  <td class="p-3.5">Ritme dan repetisi garis teratur</td>
+                  <td class="p-3.5 text-red-700">Satu garis lurus tunggal polos</td>
+                </tr>
+                <tr class="hover:bg-paperWarm/30 transition-colors">
+                  <td class="p-3.5 font-semibold text-brandNavy">Komposisi Warna</td>
+                  <td class="p-3.5">2D / 3D Permukaan</td>
+                  <td class="p-3.5">Paduan &ge; 2 warna, skema dual-tone, harmoni</td>
+                  <td class="p-3.5">Zonasi warna teratur &amp; kontras serasi</td>
+                  <td class="p-3.5 text-red-700">Warna tunggal tanpa bentuk/pola</td>
+                </tr>
+                <tr class="hover:bg-paperWarm/30 transition-colors font-medium bg-paperWarm/40">
+                  <td class="p-3.5 text-brandGoldDark font-semibold">Gabungan Daripadanya</td>
+                  <td class="p-3.5">2D / 3D Holistik</td>
+                  <td class="p-3.5">Integrasi bentuk, letak, garis, dan warna serasi</td>
+                  <td class="p-3.5">Kesan Keseluruhan (Overall Impression)</td>
+                  <td class="p-3.5 text-red-700">Bertentangan dengan ketertiban umum</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- BAB 10: DAFTAR PUSTAKA -->
+        <section id="bab-10" class="space-y-6 pt-6 border-t border-line">
+          <div class="space-y-1 border-b border-line pb-2">
+            <span class="text-xs uppercase tracking-widest text-brandGoldDark font-semibold">Sub-Bab 10</span>
+            <h2 class="text-2xl sm:text-3xl font-serif-editorial font-medium text-brandNavy">
+              Daftar Pustaka &amp; Atribusi Sumber Otoritatif
+            </h2>
+          </div>
+
+          <div class="p-5 bg-paperWarm/60 rounded-lg border border-line text-xs text-inkMuted leading-relaxed space-y-1.5">
+            <span class="font-semibold text-brandNavy block text-sm">Pernyataan Apresiasi Akademik:</span>
+            <p>
+              Redaksi <strong>IDE Indonesia (Industrial Design Examiner)</strong> menyampaikan rasa hormat dan terima kasih kepada para penyusun undang-undang, pemeriksa di Direktorat Jenderal Kekayaan Intelektual, serta para narasumber dan akademisi desain produk dunia atas literatur yang menjadi rujukan utama penyusunan monograf ini.
+            </p>
+          </div>
+
+          <div class="space-y-4 text-xs text-inkMuted">
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Materi Diklat Fungsional Pemeriksa DJKI</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>Andry.</strong> (2026). <em>Persoalan Kebaruan Visual dan Pengukurannya: Memahami Kebaruan Visual</em>. Disampaikan pada Kegiatan Peningkatan Pemahaman Bagi Jabatan Fungsional Pemeriksa Desain Industri DJKI Kementerian Hukum, Mercure Convention Center Ancol, Jakarta.
+              </p>
+            </div>
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Undang-Undang Republik Indonesia</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>Republik Indonesia.</strong> (2000). <em>Undang-Undang Republik Indonesia Nomor 31 Tahun 2000 tentang Desain Industri</em>. Lembaran Negara RI Tahun 2000 No. 243. Jakarta: Sekretariat Negara.
+              </p>
+            </div>
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Pedoman Pemeriksaan Substantif</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>Direktorat Jenderal Kekayaan Intelektual (DJKI).</strong> (2021). <em>Manual Pemeriksaan Substantif Desain Industri: Penilaian Kebaruan dan Karakter Estetis</em>. Jakarta: Kementerian Hukum RI.
+              </p>
+            </div>
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Traktat Internasional PBB</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>World Intellectual Property Organization (WIPO).</strong> (2023). <em>Guide to the International Registration of Industrial Designs under the Hague Agreement</em>. Geneva: WIPO Publication.
+              </p>
+            </div>
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Standar Uni Eropa</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>European Union Intellectual Property Office (EUIPO).</strong> (2022). <em>Common Practice on the Graphical Representations of Designs (CP6)</em>. Alicante: EUIPO.
+              </p>
+            </div>
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Pedoman Pemeriksa Paten Desain AS</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>United States Patent and Trademark Office (USPTO).</strong> (2024). <em>Manual of Patent Examining Procedure (MPEP): Chapter 1500 Design Patents</em>. Alexandria, VA: USPTO.
+              </p>
+            </div>
+
+            <div class="p-4 bg-paperElevated border border-line rounded-lg space-y-1">
+              <span class="text-[11px] font-semibold text-brandGoldDark uppercase tracking-wider block">Monograf Akademik Oxford</span>
+              <p class="text-sm font-serif-editorial text-brandNavy">
+                <strong>Bently, L., Sherman, B., Gangjee, D., &amp; Johnson, P.</strong> (2022). <em>Intellectual Property Law</em> (6th ed.). Oxford: Oxford University Press.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- CALLOUT: KOLOM DISKUSI & TANGGAPAN PEMERIKSA -->
+          <div class="my-10 p-6 sm:p-8 bg-paperElevated border border-brandGold/30 rounded-xl space-y-4 shadow-xs">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded bg-brandGoldSoft text-brandGoldDark text-[10px] font-bold uppercase tracking-wider font-mono">
+                FORUM DISKUSI
+              </span>
+              <span class="text-xs text-brandNavy font-semibold">Tanggapan &amp; Peer Review</span>
+            </div>
+            <h3 class="font-serif-editorial text-2xl font-bold text-brandNavy">
+              Kolom Komentar &amp; Telaah Rekan Sejawat
+            </h3>
+            <p class="text-xs sm:text-sm text-inkMuted leading-relaxed">
+              Diskusikan metodologi 7 proyeksi ortogonal, draft angle cetak 3D untuk injeksi massal, serta telaah hukum kebaruan Pasal 2 UU 31/2000 bersama para pemeriksa DJKI, akademisi, dan praktisi manufaktur di forum interaktif buletin utama.
+            </p>
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a
+                href="index.html#kolom-komentar"
+                class="px-5 py-2.5 bg-brandNavy text-paperElevated rounded-md text-xs font-semibold hover:bg-brandNavyDark transition-colors inline-flex items-center gap-2 shadow-xs"
+              >
+                <i data-lucide="message-square" class="w-3.5 h-3.5 text-brandGold"></i>
+                <span>Buka Kolom Komentar &amp; Tulis Tanggapan</span>
+              </a>
+              <a
+                href="mailto:arif.reza.djki@gmail.com"
+                class="px-4 py-2 bg-paperWarm text-brandNavy border border-line rounded-md text-xs font-medium hover:bg-paper transition-colors inline-flex items-center gap-1.5"
+              >
+                <span>Kontak Pemeriksa Desain Industri (Areza)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Back to Top / Home -->
+          <div class="pt-6 border-t border-line flex items-center justify-between text-xs">
+            <span class="text-inkSubtle">&copy; 2026 Industrial Design Examiner Monograph Archive</span>
+            <a href="index.html" class="inline-flex items-center gap-1.5 font-medium text-brandNavy hover:text-brandGoldDark transition-colors">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+              <span>Kembali ke Beranda Utama</span>
+            </a>
+          </div>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER (Human Colophon) -->
+  <footer class="mt-20 border-t border-line bg-paperWarm/50 text-inkMuted">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-6 border-b border-line">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="/logo-footer.svg" alt="IDE Indonesia — Industrial Design Examiner" class="h-9 w-auto object-contain">
+          <div class="flex flex-col">
+            <span class="font-serif-editorial font-bold text-lg text-brandNavy leading-none">IDE Indonesia</span>
+            <span class="text-[9px] text-inkSubtle uppercase tracking-widest font-sans mt-0.5">Industrial Design Examiner</span>
+          </div>
+        </a>
+        <div class="flex items-center gap-6 text-xs text-inkMuted">
+          <a href="index.html" class="hover:text-brandNavy transition-colors">Beranda</a>
+          <a href="index.html#empat-elemen" class="hover:text-brandNavy transition-colors">Empat Elemen</a>
+          <a href="index.html#meja-pemeriksa" class="hover:text-brandNavy transition-colors">Bedah Kasus</a>
+          <a href="index.html#glosarium" class="hover:text-brandNavy transition-colors">Glosarium</a>
+          <a href="mailto:arif.reza.djki@gmail.com" class="text-brandGoldDark font-medium hover:underline">Kontak Areza</a>
+        </div>
+      </div>
+
+      <!-- MANDATORY VERBATIM DISCLAIMER -->
+      <div class="space-y-4">
+        <div class="p-4 bg-paperElevated rounded border border-line text-xs text-inkMuted leading-relaxed">
+          <strong class="text-brandNavy block text-[11px] uppercase tracking-wider mb-1">
+            Penafian (Disclaimer):
+          </strong>
+          Situs ini adalah platform edukasi dan literasi independen seputar rekayasa dan desain produk. Seluruh konten merupakan pandangan pribadi penulis dari sudut pandang keilmuan praktis/akademis dan tidak mewakili instansi, lembaga, atau organisasi mana pun.
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-inkSubtle gap-2">
+          <div>
+            &copy; 2026 IDE Indonesia (Industrial Design Examiner). Dikelola oleh Areza (arif.reza.djki@gmail.com).
+          </div>
+          <div>
+            Bentuk · Konfigurasi · Garis · Warna
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- TOC SCROLLSPY -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      const sections = document.querySelectorAll('article section[id]');
+      const navLinks = document.querySelectorAll('.toc-item');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 140;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && !(scrollY >= sectionTop + sectionHeight)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Industrial Design Examiner",
+  "description": "Website & Jurnal Pribadi Arif Reza Basirun (Arez) — Pemeriksa Desain Industri DJKI Kementerian Hukum RI, Desain Produk Engineering, Additive Manufacturing (3D Printing), dan CAD/CAM.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadowAM3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="627" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadowAM3)"/>
+
+  <!-- TOP HEADER -->
+  <g transform="translate(60, 58)">
+    <rect width="280" height="28" rx="6" fill="#e0f2fe"/>
+    <text x="12" y="19" fill="#0369a1" font-size="11" font-weight="800" font-mono="true" letter-spacing="1">
+      GAMBAR 3 &#8226; ALUR PRODUKSI &amp; HUKUM
+    </text>
+
+    <text x="0" y="60" fill="#0f172a" font-size="28" font-weight="800" letter-spacing="-0.5">
+      Kunci Hak Desain Setelah Bentuk Final, Sebelum Pameran &amp; Penjualan
+    </text>
+    <text x="0" y="86" fill="#64748b" font-size="14" font-weight="500">
+      Alur dari Ide Sampai Produksi Massal, dan Titik Krusial Mengunci Hak Desain Industri
+    </text>
+  </g>
+
+  <!-- FLOWCHART CONTAINER -->
+  <g transform="translate(60, 165)">
+    <rect width="1080" height="425" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2" filter="url(#shadowAM3)"/>
+
+    <!-- ROW 1: PHASE 1 - R&D & PROTOTYPING ITERATION -->
+    <g transform="translate(40, 40)">
+      
+      <!-- Box 1: Ide dan pasar -->
+      <g transform="translate(0, 0)">
+        <rect width="210" height="85" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+        <text x="105" y="36" fill="#0f172a" font-size="15" font-weight="800" text-anchor="middle">Ide dan pasar</text>
+        <text x="105" y="58" fill="#64748b" font-size="12" text-anchor="middle">kebutuhan pengguna</text>
+      </g>
+
+      <!-- Arrow 1 -> 2 -->
+      <path d="M 220 42 L 250 42" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="252,42 244,37 244,47" fill="#0284c7"/>
+
+      <!-- Box 2: Model CAD -->
+      <g transform="translate(260, 0)">
+        <rect width="210" height="85" rx="12" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+        <text x="105" y="36" fill="#0369a1" font-size="15" font-weight="800" text-anchor="middle">Model CAD</text>
+        <text x="105" y="58" fill="#0284c7" font-size="12" text-anchor="middle">bentuk dan fungsi</text>
+      </g>
+
+      <!-- Arrow 2 -> 3 -->
+      <path d="M 480 42 L 510 42" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="512,42 504,37 504,47" fill="#0284c7"/>
+
+      <!-- Box 3: Cetak prototipe -->
+      <g transform="translate(520, 0)">
+        <rect width="210" height="85" rx="12" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
+        <text x="105" y="36" fill="#065f46" font-size="15" font-weight="800" text-anchor="middle">Cetak prototipe</text>
+        <text x="105" y="58" fill="#047857" font-size="12" text-anchor="middle">jam sampai hari</text>
+      </g>
+
+      <!-- Arrow 3 -> 4 -->
+      <path d="M 740 42 L 770 42" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="772,42 764,37 764,47" fill="#0284c7"/>
+
+      <!-- Box 4: Uji dan iterasi -->
+      <g transform="translate(780, 0)">
+        <rect width="220" height="85" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="110" y="36" fill="#92400e" font-size="15" font-weight="800" text-anchor="middle">Uji dan iterasi</text>
+        <text x="110" y="58" fill="#b45309" font-size="12" text-anchor="middle">bentuk dan ergonomi</text>
+      </g>
+
+      <!-- Iteration Loop Arrow (Uji dan iterasi -> Model CAD) -->
+      <path d="M 890 0 C 890 -25 365 -25 365 -5" fill="none" stroke="#64748b" stroke-width="1.8" stroke-dasharray="4 4"/>
+      <polygon points="365,-2 360,-9 370,-9" fill="#64748b"/>
+      <rect x="560" y="-32" width="130" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+      <text x="625" y="-18" fill="#64748b" font-size="10" font-weight="700" text-anchor="middle">ulangi sampai sesuai</text>
+    </g>
+
+    <!-- CONNECTOR DOWNWARDS -->
+    <path d="M 930 135 L 930 185" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="930,188 925,178 935,178" fill="#0284c7"/>
+
+    <!-- ROW 2: PHASE 2 - PRODUCTION & IP FILING (Right to Left flow) -->
+    <g transform="translate(40, 200)">
+      
+      <!-- Box 5: Siapkan produksi -->
+      <g transform="translate(780, 0)">
+        <rect width="220" height="90" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+        <text x="110" y="38" fill="#0f172a" font-size="15" font-weight="800" text-anchor="middle">Siapkan produksi</text>
+        <text x="110" y="60" fill="#64748b" font-size="12" text-anchor="middle">sesuaikan bentuk (DFM)</text>
+      </g>
+
+      <!-- Arrow 5 -> 6 -->
+      <path d="M 770 45 L 610 45" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="606,45 614,40 614,50" fill="#d97706"/>
+
+      <!-- Box 6: DAFTOKAN DESAIN (CRITICAL LOCK BOX) -->
+      <g transform="translate(350, -10)">
+        <rect width="250" height="110" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" filter="url(#shadowAM3)"/>
+        <!-- Star / Badge -->
+        <circle cx="125" cy="-8" r="14" fill="#d97706"/>
+        <text x="125" y="-3" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle">&#10003;</text>
+
+        <text x="125" y="36" fill="#92400e" font-size="16" font-weight="900" text-anchor="middle">Daftarkan desain</text>
+        <text x="125" y="58" fill="#b45309" font-size="13" font-weight="700" text-anchor="middle">versi yang dijual</text>
+        
+        <rect x="15" y="72" width="220" height="24" rx="6" fill="#b45309"/>
+        <text x="125" y="88" fill="#ffffff" font-size="10.5" font-weight="800" text-anchor="middle">
+          KUNCI HAK SEBELUM PAMERAN/JUAL!
+        </text>
+      </g>
+
+      <!-- Arrow 6 -> 7 -->
+      <path d="M 340 45 L 220 45" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="216,45 224,40 224,50" fill="#0284c7"/>
+
+      <!-- Box 7: Produksi massal -->
+      <g transform="translate(0, 0)">
+        <rect width="210" height="90" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="1.8"/>
+        <text x="105" y="38" fill="#065f46" font-size="15" font-weight="800" text-anchor="middle">Produksi massal</text>
+        <text x="105" y="60" fill="#047857" font-size="12" text-anchor="middle">cetakan dan volume</text>
+      </g>
+
+    </g>
+
+    <!-- BRIDGE MANUFACTURING CALLOUT STRIP -->
+    <g transform="translate(40, 335)">
+      <rect width="1000" height="50" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2"/>
+      <text x="25" y="30" fill="#0369a1" font-size="12" font-weight="700">
+        Prinsip Jembatan (Bridge Manufacturing): <tspan fill="#475569" font-weight="500">AM tetap bisa dipakai sebagai produksi jembatan dalam jumlah terbatas sampai cetakan injeksi siap.</tspan>
+      </text>
+    </g>
+
+  </g>
+
+  <!-- FOOTER -->
+  <g transform="translate(60, 620)">
+    <text x="0" y="14" fill="#94a3b8" font-size="11" font-mono="true">
+      Skema analisis oleh penulis; bukan standar baku industri &#8226; IDE Indonesia oleh Arif Reza Basirun
+    </text>
+  </g>
+</svg>
