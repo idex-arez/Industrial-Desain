@@ -224,12 +224,17 @@
       <!-- Left: Authentic IDE Indonesia Logo & Brand Title -->
       <div class="flex items-center gap-6">
         <a href="#hy-arez" onclick="switchTab('hy-arez')" class="flex items-center gap-2.5 shrink-0 group focus:outline-none" title="Beranda Hy Arez — Arif Reza Basirun (IDE Indonesia)">
-          <img
-            src="./logo.png"
-            alt="IDE Indonesia Logo"
-            class="w-7 h-7 sm:w-8 sm:h-8 object-contain shrink-0"
-            onerror="this.onerror=null; this.src='./logo-mark.svg';"
-          >
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 shrink-0" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="IDE Indonesia Logo">
+            <!-- INDUSTRIAL DESIGN EXAMINER - OFFICIAL EMBLEM MARK -->
+            <g transform="translate(200, 200) scale(0.82)">
+              <g transform="rotate(45)">
+                <path d="M -18 174.00 L 18 174.00 L 18 238.00 A 18 18 0 0 1 -18 238.00 Z" fill="#FAB800" />
+                <path d="M -176.36 -36.00 L 176.36 -36.00 A 180 180 0 0 0 -176.36 -36.00 Z M -124.71 -72.00 A 144 144 0 0 1 124.71 -72.00 L -124.71 -72.00 Z" fill="#FAB800" fill-rule="evenodd" />
+                <path d="M -179.10 -18.00 L 179.10 -18.00 A 180 180 0 0 1 179.29 16.00 L -179.29 16.00 A 180 180 0 0 1 -179.10 -18.00 Z" fill="#FAB800" />
+                <path d="M -176.76 34.00 A 180 180 0 0 0 176.76 34.00 L 139.93 34.00 A 144 144 0 0 1 18 142.87 L 18 34.00 L -18 34.00 L -18 142.87 A 144 144 0 0 1 -139.93 34.00 Z" fill="#0C2340" />
+              </g>
+            </g>
+          </svg>
           <span class="text-base sm:text-lg font-semibold tracking-tight text-[#262626] group-hover:text-[#0067b8] transition-colors flex items-center gap-2">
             Hy Arez
             <span class="text-xs text-[#616161] font-normal hidden md:inline border-l border-[#d2d2d2] pl-2">IDE Indonesia</span>
@@ -479,12 +484,18 @@
       <div class="bg-white border border-[#e6e6e6] p-6 sm:p-10 shadow-xs space-y-6">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-[#e6e6e6] pb-6">
           <div class="flex items-center gap-5">
-            <img
-              src="./logo.png"
-              alt="Arif Reza Basirun"
-              class="w-20 h-20 border border-[#e6e6e6] p-1 bg-white object-contain shrink-0"
-              onerror="this.onerror=null; this.src='./logo-mark.svg';"
-            >
+            <div class="w-16 h-16 sm:w-20 sm:h-20 border border-[#e6e6e6] p-2 bg-white flex items-center justify-center shrink-0 shadow-xs" title="Arif Reza Basirun — IDE Indonesia">
+              <svg class="w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Monogram IDE Indonesia">
+                <g transform="translate(200, 200) scale(0.82)">
+                  <g transform="rotate(45)">
+                    <path d="M -18 174.00 L 18 174.00 L 18 238.00 A 18 18 0 0 1 -18 238.00 Z" fill="#FAB800" />
+                    <path d="M -176.36 -36.00 L 176.36 -36.00 A 180 180 0 0 0 -176.36 -36.00 Z M -124.71 -72.00 A 144 144 0 0 1 124.71 -72.00 L -124.71 -72.00 Z" fill="#FAB800" fill-rule="evenodd" />
+                    <path d="M -179.10 -18.00 L 179.10 -18.00 A 180 180 0 0 1 179.29 16.00 L -179.29 16.00 A 180 180 0 0 1 -179.10 -18.00 Z" fill="#FAB800" />
+                    <path d="M -176.76 34.00 A 180 180 0 0 0 176.76 34.00 L 139.93 34.00 A 144 144 0 0 1 18 142.87 L 18 34.00 L -18 34.00 L -18 142.87 A 144 144 0 0 1 -139.93 34.00 Z" fill="#0C2340" />
+                  </g>
+                </g>
+              </svg>
+            </div>
             <div>
               <span class="text-xs font-semibold text-[#0067b8] uppercase tracking-wider block">
                 Profil Resmi · Pemeriksa Desain Industri Ahli Pertama
@@ -3853,7 +3864,7 @@
     const STORAGE_KEY_VIEWS = 'ide_post_views_v2';
     const STORAGE_KEY_AUTH = 'ide_author_auth_session';
 
-    let ARTICLES = {};
+    let ARTICLES = JSON.parse(JSON.stringify(DEFAULT_ARTICLES));
     let COMMENTS = []; // ZERO DUMMY COMMENTS - Start completely empty or from user submissions!
     let activeTab = 'hy-arez';
     let currentPostId = null;
@@ -3928,7 +3939,12 @@
           if (parsed && typeof parsed === 'object') {
             Object.keys(parsed).forEach(k => {
               if (parsed[k] && parsed[k].title) {
-                ARTICLES[k] = parsed[k];
+                const def = DEFAULT_ARTICLES[k] || {};
+                ARTICLES[k] = {
+                  ...def,
+                  ...parsed[k],
+                  tabCategory: parsed[k].tabCategory || def.tabCategory || (k === '11' ? 'additive-manufacturing' : 'desain-industri')
+                };
               }
             });
           }
@@ -3937,10 +3953,13 @@
         console.warn('LocalStorage articles parse error:', e);
       }
 
-      // Guarantee all default articles exist with full bodyHtml and proper paths
+      // Guarantee all default articles exist with full bodyHtml and valid tabCategory
       for (const k of Object.keys(DEFAULT_ARTICLES)) {
         if (!ARTICLES[k] || !ARTICLES[k].bodyHtml || ARTICLES[k].bodyHtml.length < 50) {
           ARTICLES[k] = JSON.parse(JSON.stringify(DEFAULT_ARTICLES[k]));
+        }
+        if (!ARTICLES[k].tabCategory) {
+          ARTICLES[k].tabCategory = DEFAULT_ARTICLES[k].tabCategory || (k === '11' ? 'additive-manufacturing' : 'desain-industri');
         }
       }
       saveArticlesToStorage();
@@ -4235,7 +4254,7 @@
               alt="${escapeHtml(a.title)}"
               class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
-              onerror="handleImgError(this, '${escapeHtml(a.title)}');"
+              onerror="handleImgError(this);"
             >
 
             ${isAuth ? `
@@ -4295,14 +4314,24 @@
       const container = document.getElementById('feed-desain-industri');
       if (!container) return;
 
-      let list = Object.values(ARTICLES).filter(a => a.tabCategory === 'desain-industri');
+      if (!ARTICLES || Object.keys(ARTICLES).length === 0) {
+        ARTICLES = JSON.parse(JSON.stringify(DEFAULT_ARTICLES));
+      }
+
+      let list = Object.values(ARTICLES).filter(a => {
+        if (!a) return false;
+        if (a.id === '1' || a.id === '9' || a.id === '10') return true;
+        if (a.tabCategory === 'desain-industri') return true;
+        if (!a.tabCategory && a.id !== '11') return true;
+        return false;
+      });
 
       if (filter === 'regulasi') {
         list = list.filter(a => (a.category || '').toLowerCase().includes('regulasi') || (a.title || '').toLowerCase().includes('dunia'));
       } else if (filter === 'hukum') {
         list = list.filter(a => (a.category || '').toLowerCase().includes('hukum') || (a.title || '').toLowerCase().includes('kebaruan'));
       } else if (filter === 'teori') {
-        list = list.filter(a => (a.category || '').toLowerCase().includes('teori') || (a.category || '').toLowerCase().includes('geon') || (a.category || '').toLowerCase().includes('maya'));
+        list = list.filter(a => (a.category || '').toLowerCase().includes('teori') || (a.category || '').toLowerCase().includes('geon') || (a.category || '').toLowerCase().includes('maya') || (a.category || '').toLowerCase().includes('doktrin') || (a.category || '').toLowerCase().includes('batas'));
       } else if (filter !== 'all') {
         // text search query
         const q = filter.toLowerCase();
@@ -4311,6 +4340,11 @@
           (a.excerpt || '').toLowerCase().includes(q) ||
           (a.category || '').toLowerCase().includes(q)
         );
+      }
+
+      // If empty for 'all', fallback immediately to guaranteed default articles
+      if (list.length === 0 && (filter === 'all' || !filter)) {
+        list = [DEFAULT_ARTICLES['10'], DEFAULT_ARTICLES['9'], DEFAULT_ARTICLES['1']].filter(Boolean);
       }
 
       if (list.length === 0) {
@@ -4339,16 +4373,20 @@
       const container = document.getElementById('feed-additive-manufacturing');
       if (!container) return;
 
-      const list = Object.values(ARTICLES).filter(a => a.tabCategory === 'additive-manufacturing');
-      if (list.length === 0) {
-        container.innerHTML = `
-          <div class="col-span-full p-8 text-center bg-white rounded-2xl border border-slate-200 text-xs text-slate-500 space-y-2">
-            <p class="font-semibold text-slate-700">Belum ada artikel pada rubrik Additive Manufacturing.</p>
-            <p>Klik tombol <strong>+ Tulis Konten</strong> di atas untuk menambahkan artikel atau riset 3D printing baru!</p>
-          </div>
-        `;
-        return;
+      if (!ARTICLES || Object.keys(ARTICLES).length === 0) {
+        ARTICLES = JSON.parse(JSON.stringify(DEFAULT_ARTICLES));
       }
+
+      let list = Object.values(ARTICLES).filter(a => {
+        if (!a) return false;
+        if (a.id === '11') return true;
+        return a.tabCategory === 'additive-manufacturing';
+      });
+
+      if (list.length === 0) {
+        list = [DEFAULT_ARTICLES['11']].filter(Boolean);
+      }
+
       container.innerHTML = list.map(a => renderArticleCard(a)).join('');
     }
 
@@ -4356,9 +4394,16 @@
       const container = document.getElementById('hy-arez-featured-grid');
       if (!container) return;
 
+      if (!ARTICLES || Object.keys(ARTICLES).length === 0) {
+        ARTICLES = JSON.parse(JSON.stringify(DEFAULT_ARTICLES));
+      }
+
       // Select top featured posts
       const featuredKeys = ['10', '9', '1'];
-      const list = featuredKeys.map(k => ARTICLES[k]).filter(Boolean);
+      let list = featuredKeys.map(k => (ARTICLES && ARTICLES[k]) || DEFAULT_ARTICLES[k]).filter(Boolean);
+      if (list.length === 0) {
+        list = [DEFAULT_ARTICLES['10'], DEFAULT_ARTICLES['9'], DEFAULT_ARTICLES['1']].filter(Boolean);
+      }
       container.innerHTML = list.map(a => renderArticleCard(a)).join('');
     }
 
@@ -5312,7 +5357,6 @@
       try { initPortfolios(); } catch (e) { console.warn('initPortfolios error', e); }
       try { updateGlobalViewsCounter(); } catch (e) {}
       try { updateAdminUI(); } catch (e) {}
-      try { initStudio3D(); } catch (e) { console.warn('initStudio3D caught', e); }
 
       // Direct event listeners for navigation tabs
       const tabIds = ['hy-arez', 'desain-industri', 'additive-manufacturing', 'portofolio'];
