@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadowAM4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="627" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadowAM4)"/>
+
+  <!-- TOP HEADER -->
+  <g transform="translate(60, 58)">
+    <rect width="280" height="28" rx="6" fill="#e0f2fe"/>
+    <text x="12" y="19" fill="#0369a1" font-size="11" font-weight="800" font-mono="true" letter-spacing="1">
+      GAMBAR 4 &#8226; STRATEGI HKI MULTI-LAPIS
+    </text>
+
+    <text x="0" y="60" fill="#0f172a" font-size="28" font-weight="800" letter-spacing="-0.5">
+      Satu Produk Cetak 3D, Beberapa Lapis Perlindungan
+    </text>
+    <text x="0" y="86" fill="#64748b" font-size="14" font-weight="500">
+      Pembagian Peran Perlindungan Kekayaan Intelektual dan Kontrak pada Ekosistem Digital Manufaktur Aditif
+    </text>
+  </g>
+
+  <!-- 5 PILLARS CARDS (Grid 5 Columns) -->
+  <g transform="translate(60, 168)">
+
+    <!-- PILLAR 1: PATEN -->
+    <g transform="translate(0, 0)">
+      <rect width="200" height="380" rx="14" fill="#ffffff" stroke="#334155" stroke-width="1.5" filter="url(#shadowAM4)"/>
+      <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 186 0 C 193.73 0 200 6.27 200 14 L 200 48 L 0 48 Z" fill="#1e293b"/>
+      <text x="100" y="30" fill="#f8fafc" font-size="15" font-weight="900" text-anchor="middle" font-mono="true">PATEN</text>
+
+      <g transform="translate(20, 68)">
+        <text x="80" y="18" fill="#0f172a" font-size="14" font-weight="800" text-anchor="middle">Fungsi Teknis</text>
+        <line x1="10" y1="36" x2="150" y2="36" stroke="#f1f5f9" stroke-width="1.5"/>
+
+        <text x="80" y="70" fill="#475569" font-size="12" text-anchor="middle">Struktur kisi</text>
+        <text x="80" y="90" fill="#475569" font-size="12" text-anchor="middle">(lattice)</text>
+        <text x="80" y="115" fill="#475569" font-size="12" text-anchor="middle">Rongga internal</text>
+        <text x="80" y="140" fill="#475569" font-size="12" text-anchor="middle">Komponen</text>
+        <text x="80" y="160" fill="#475569" font-size="12" text-anchor="middle">gabungan mekanis</text>
+
+        <rect x="5" y="210" width="150" height="36" rx="6" fill="#f1f5f9"/>
+        <text x="80" y="232" fill="#334155" font-size="10.5" font-weight="700" text-anchor="middle">Invensi Cara Kerja</text>
+      </g>
+    </g>
+
+    <!-- PILLAR 2: DESAIN INDUSTRI (HIGHLIGHTED) -->
+    <g transform="translate(220, 0)">
+      <rect width="200" height="380" rx="14" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="url(#shadowAM4)"/>
+      <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 186 0 C 193.73 0 200 6.27 200 14 L 200 48 L 0 48 Z" fill="#d97706"/>
+      <text x="100" y="24" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-mono="true">DESAIN</text>
+      <text x="100" y="38" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-mono="true">INDUSTRI</text>
+
+      <g transform="translate(20, 68)">
+        <text x="80" y="18" fill="#92400e" font-size="14" font-weight="800" text-anchor="middle">Tampilan Produk</text>
+        <line x1="10" y1="36" x2="150" y2="36" stroke="#fef3c7" stroke-width="1.5"/>
+
+        <text x="80" y="70" fill="#78350f" font-size="12" text-anchor="middle">Bentuk luar 3D</text>
+        <text x="80" y="95" fill="#78350f" font-size="12" text-anchor="middle">Garis kontur &amp; motif</text>
+        <text x="80" y="120" fill="#78350f" font-size="12" text-anchor="middle">Warna yang terlihat</text>
+        <text x="80" y="145" fill="#78350f" font-size="12" text-anchor="middle">Kesan estetis</text>
+
+        <rect x="5" y="210" width="150" height="36" rx="6" fill="#fef3c7"/>
+        <text x="80" y="232" fill="#b45309" font-size="10.5" font-weight="800" text-anchor="middle">UU No. 31/2000</text>
+      </g>
+    </g>
+
+    <!-- PILLAR 3: HAK CIPTA -->
+    <g transform="translate(440, 0)">
+      <rect width="200" height="380" rx="14" fill="#ffffff" stroke="#0f766e" stroke-width="1.5" filter="url(#shadowAM4)"/>
+      <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 186 0 C 193.73 0 200 6.27 200 14 L 200 48 L 0 48 Z" fill="#0f766e"/>
+      <text x="100" y="30" fill="#ffffff" font-size="15" font-weight="900" text-anchor="middle" font-mono="true">HAK CIPTA</text>
+
+      <g transform="translate(20, 68)">
+        <text x="80" y="18" fill="#134e4a" font-size="14" font-weight="800" text-anchor="middle">File dan Gambar</text>
+        <line x1="10" y1="36" x2="150" y2="36" stroke="#f1f5f9" stroke-width="1.5"/>
+
+        <text x="80" y="70" fill="#475569" font-size="12" text-anchor="middle">Model CAD digital</text>
+        <text x="80" y="95" fill="#475569" font-size="12" text-anchor="middle">Gambar teknik 2D</text>
+        <text x="80" y="120" fill="#475569" font-size="12" text-anchor="middle">Kode instruksi mesin</text>
+        <text x="80" y="145" fill="#64748b" font-size="11" font-style="italic" text-anchor="middle">(perlu dikaji spesifik)</text>
+
+        <rect x="5" y="210" width="150" height="36" rx="6" fill="#ccfbf1"/>
+        <text x="80" y="232" fill="#0f766e" font-size="10.5" font-weight="700" text-anchor="middle">Ekspresi Karya Asli</text>
+      </g>
+    </g>
+
+    <!-- PILLAR 4: MEREK -->
+    <g transform="translate(660, 0)">
+      <rect width="200" height="380" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" filter="url(#shadowAM4)"/>
+      <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 186 0 C 193.73 0 200 6.27 200 14 L 200 48 L 0 48 Z" fill="#2563eb"/>
+      <text x="100" y="30" fill="#ffffff" font-size="15" font-weight="900" text-anchor="middle" font-mono="true">MEREK</text>
+
+      <g transform="translate(20, 68)">
+        <text x="80" y="18" fill="#1e40af" font-size="14" font-weight="800" text-anchor="middle">Identitas</text>
+        <line x1="10" y1="36" x2="150" y2="36" stroke="#f1f5f9" stroke-width="1.5"/>
+
+        <text x="80" y="70" fill="#475569" font-size="12" text-anchor="middle">Nama dagang produk</text>
+        <text x="80" y="95" fill="#475569" font-size="12" text-anchor="middle">Logo tertera</text>
+        <text x="80" y="120" fill="#475569" font-size="12" text-anchor="middle">Reputasi produsen</text>
+        <text x="80" y="145" fill="#475569" font-size="12" text-anchor="middle">Asal-usul komersial</text>
+
+        <rect x="5" y="210" width="150" height="36" rx="6" fill="#dbeafe"/>
+        <text x="80" y="232" fill="#1e40af" font-size="10.5" font-weight="700" text-anchor="middle">Pembeda di Pasar</text>
+      </g>
+    </g>
+
+    <!-- PILLAR 5: KONTRAK -->
+    <g transform="translate(880, 0)">
+      <rect width="200" height="380" rx="14" fill="#ffffff" stroke="#059669" stroke-width="1.5" filter="url(#shadowAM4)"/>
+      <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 186 0 C 193.73 0 200 6.27 200 14 L 200 48 L 0 48 Z" fill="#059669"/>
+      <text x="100" y="30" fill="#ffffff" font-size="15" font-weight="900" text-anchor="middle" font-mono="true">KONTRAK</text>
+
+      <g transform="translate(20, 68)">
+        <text x="80" y="18" fill="#065f46" font-size="14" font-weight="800" text-anchor="middle">File Dibagikan</text>
+        <line x1="10" y1="36" x2="150" y2="36" stroke="#f1f5f9" stroke-width="1.5"/>
+
+        <text x="80" y="70" fill="#475569" font-size="12" text-anchor="middle">Perjanjian NDA</text>
+        <text x="80" y="95" fill="#475569" font-size="12" text-anchor="middle">Lisensi manufaktur</text>
+        <text x="80" y="120" fill="#475569" font-size="12" text-anchor="middle">Akses terbatas cetak</text>
+        <text x="80" y="145" fill="#475569" font-size="12" text-anchor="middle">Rahasia dagang</text>
+
+        <rect x="5" y="210" width="150" height="36" rx="6" fill="#d1fae5"/>
+        <text x="80" y="232" fill="#065f46" font-size="10.5" font-weight="700" text-anchor="middle">Perjanjian Kerahasiaan</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- FOOTER -->
+  <g transform="translate(60, 620)">
+    <text x="0" y="14" fill="#94a3b8" font-size="11" font-mono="true">
+      Pembagian peran oleh penulis (analisis); penerapan tiap hak bergantung pada fakta dan hukum yang berlaku &#8226; IDE Indonesia
+    </text>
+  </g>
+</svg>

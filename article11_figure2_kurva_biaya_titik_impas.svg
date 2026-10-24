@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#ffffff; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadowAM2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="627" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadowAM2)"/>
+
+  <!-- TOP HEADER -->
+  <g transform="translate(60, 58)">
+    <rect width="280" height="28" rx="6" fill="#e0f2fe"/>
+    <text x="12" y="19" fill="#0369a1" font-size="11" font-weight="800" font-mono="true" letter-spacing="1">
+      GAMBAR 2 &#8226; ANALISIS EKONOMI MANUFAKTUR
+    </text>
+
+    <text x="0" y="60" fill="#0f172a" font-size="28" font-weight="800" letter-spacing="-0.5">
+      Volume dan Keseragaman Produk Menentukan Metode Produksi
+    </text>
+    <text x="0" y="86" fill="#64748b" font-size="14" font-weight="500">
+      Skema Perbandingan Biaya per Unit Menurut Volume: Pencetakan 3D vs Cetakan Injeksi
+    </text>
+  </g>
+
+  <!-- GRAPH CONTAINER -->
+  <g transform="translate(60, 165)">
+    <rect width="1080" height="425" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2" filter="url(#shadowAM2)"/>
+
+    <!-- Left Axis Y -->
+    <g transform="translate(80, 20)">
+      <line x1="0" y1="330" x2="0" y2="20" stroke="#94a3b8" stroke-width="2"/>
+      <path d="M -4 25 L 0 15 L 4 25" fill="#94a3b8"/>
+      <text x="-40" y="180" fill="#64748b" font-size="12" font-weight="600" transform="rotate(-90, -40, 180)" text-anchor="middle">
+        Biaya per unit (skema)
+      </text>
+
+      <!-- Bottom Axis X -->
+      <line x1="0" y1="330" x2="940" y2="330" stroke="#94a3b8" stroke-width="2"/>
+      <path d="M 935 326 L 945 330 L 935 334" fill="#94a3b8"/>
+      <text x="470" y="365" fill="#64748b" font-size="12" font-weight="600" text-anchor="middle">
+        Jumlah unit identik
+      </text>
+
+      <!-- Ticks on X -->
+      <text x="10" y="348" fill="#94a3b8" font-size="11" font-mono="true">0</text>
+      <text x="188" y="348" fill="#94a3b8" font-size="11" font-mono="true">5 rb</text>
+      <line x1="195" y1="330" x2="195" y2="335" stroke="#94a3b8" stroke-width="1.5"/>
+
+      <text x="375" y="348" fill="#94a3b8" font-size="11" font-mono="true">10 rb</text>
+      <line x1="385" y1="330" x2="385" y2="335" stroke="#94a3b8" stroke-width="1.5"/>
+
+      <text x="565" y="348" fill="#94a3b8" font-size="11" font-mono="true">15 rb</text>
+      <line x1="575" y1="330" x2="575" y2="335" stroke="#94a3b8" stroke-width="1.5"/>
+
+      <text x="755" y="348" fill="#94a3b8" font-size="11" font-mono="true">20 rb</text>
+      <line x1="765" y1="330" x2="765" y2="335" stroke="#94a3b8" stroke-width="1.5"/>
+
+      <text x="910" y="348" fill="#94a3b8" font-size="11" font-mono="true">25 rb</text>
+      <line x1="920" y1="330" x2="920" y2="335" stroke="#94a3b8" stroke-width="1.5"/>
+
+      <!-- CURVE 1: 3D Printing (Relatively flat line) -->
+      <line x1="0" y1="180" x2="920" y2="185" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- CURVE 2: Injection Molding (High initial tooling cost, dropping sharply) -->
+      <path d="M 15 28 C 60 70 180 145 395 182 C 550 205 750 235 920 250" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- BREAKEVEN INTERSECTION POINT -->
+      <!-- Vertical Dashed Line at 10.263 unit -->
+      <line x1="395" y1="330" x2="395" y2="50" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <circle cx="395" cy="182" r="7" fill="#0f172a" stroke="#ffffff" stroke-width="2.5"/>
+
+      <!-- Breakeven Callout Box -->
+      <g transform="translate(395, 40)">
+        <rect x="15" y="-15" width="280" height="48" rx="8" fill="#0f172a" fill-opacity="0.9"/>
+        <text x="25" y="6" fill="#f8fafc" font-size="12" font-weight="700">Titik Impas Sekitar 10.263 Unit</text>
+        <text x="25" y="24" fill="#94a3b8" font-size="10.5">(Satu studi; sumber lain: 1.000 &#8211; 13.000)</text>
+      </g>
+
+      <!-- LEFT REGION CALLOUT -->
+      <g transform="translate(60, 215)">
+        <rect width="250" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+        <text x="14" y="22" fill="#b45309" font-size="12" font-weight="800">AM Lebih Murah:</text>
+        <text x="14" y="42" fill="#78350f" font-size="11">Volume kecil, produk bervariasi</text>
+      </g>
+
+      <!-- RIGHT REGION CALLOUT -->
+      <g transform="translate(560, 230)">
+        <rect width="280" height="60" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1"/>
+        <text x="14" y="22" fill="#0369a1" font-size="12" font-weight="800">Cetakan Injeksi Lebih Murah:</text>
+        <text x="14" y="42" fill="#0c4a6e" font-size="11">Volume besar, produk seragam</text>
+      </g>
+
+      <!-- LEGEND (Bottom right) -->
+      <g transform="translate(260, 385)">
+        <line x1="0" y1="8" x2="35" y2="8" stroke="#f59e0b" stroke-width="3"/>
+        <text x="45" y="12" fill="#475569" font-size="11">Pencetakan 3D (biaya per unit relatif tetap)</text>
+
+        <line x1="330" y1="8" x2="365" y2="8" stroke="#0284c7" stroke-width="3"/>
+        <text x="375" y="12" fill="#475569" font-size="11">Cetakan injeksi (biaya cetakan dibagi volume)</text>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- FOOTER -->
+  <g transform="translate(60, 620)">
+    <text x="0" y="14" fill="#94a3b8" font-size="11" font-mono="true">
+      Skema ilustratif penulis; titik impas mengacu Sungkyunkwan University [5] &amp; EvokPoly [9] &#8226; IDE Indonesia
+    </text>
+  </g>
+</svg>
