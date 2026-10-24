@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="100%">
+  <!-- INDUSTRIAL DESIGN EXAMINER - HORIZONTAL BRAND LOCKUP -->
+  <g transform="translate(10, 10)">
+    <!-- Scale 400x400 emblem down to 100x100 (scale 0.25) -->
+    <g transform="scale(0.25)">
+      <g transform="rotate(-45, 200, 200)">
+        <path
+          fill-rule="evenodd"
+          d="M 72 176 A 130 130 0 0 1 328 176 L 72 176 Z M 101 152 L 299 152 A 102 102 0 0 0 101 152 Z"
+          fill="#F5B000"
+        />
+        <rect x="40" y="188" width="288" height="24" rx="12" fill="#F5B000" />
+        <path
+          d="M 72 224 A 130 130 0 0 0 328 224 L 299 224 A 102 102 0 0 1 101 224 Z"
+          fill="#0A2240"
+        />
+        <rect x="72" y="218" width="29" height="32" fill="#0A2240" />
+        <rect x="188" y="218" width="24" height="84" fill="#0A2240" />
+        <rect x="299" y="218" width="29" height="32" fill="#0A2240" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="130" y="55" font-family="'DM Sans', -apple-system, sans-serif" font-weight="800" font-size="28" fill="#0A2240" letter-spacing="-0.5">
+    INDUSTRIAL DESIGN
+  </text>
+  <line x1="130" y1="78" x2="185" y2="78" stroke="#F5B000" stroke-width="3" stroke-linecap="round" />
+  <text x="252" y="84" font-family="'IBM Plex Mono', monospace" font-weight="700" font-size="15" fill="#0A2240" letter-spacing="4" text-anchor="middle">
+    EXAMINER
+  </text>
+  <line x1="320" y1="78" x2="375" y2="78" stroke="#F5B000" stroke-width="3" stroke-linecap="round" />
+</svg>

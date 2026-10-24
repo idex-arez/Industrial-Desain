@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hy Arez — Arif Reza Basirun | Pemeriksa Desain Industri, Additive Manufacturing & CAD CAM</title>
+  <meta name="description" content="Website &amp; Jurnal Pribadi Arif Reza Basirun (Arez) — Pemeriksa Desain Industri Ahli Pertama di Direktorat Jenderal Kekayaan Intelektual (DJKI) Kementerian Hukum RI, Alumnus S2 Teknik Industri UGM. Membahas Desain Industri, Additive Manufacturing (3D Printing), dan CAD/CAM.">
+  <meta property="og:title" content="Hy Arez — Arif Reza Basirun | Pemeriksa Desain Industri & Additive Manufacturing">
+  <meta property="og:description" content="Portal kajian kebaruan visual, manufaktur aditif 3D printing, dan portofolio desain oleh Arif Reza Basirun (DJKI Kementerian Hukum RI).">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./logo.svg">
+
+  <!-- Microsoft Segoe UI & Editorial Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            msBlue: '#0067b8',
+            msBlueDark: '#005da6',
+            msBlueLight: '#e6f2fb',
+            msDark: '#262626',
+            msMuted: '#616161',
+            msBgLight: '#f2f2f2',
+            msBorder: '#e6e6e6',
+            brandBlue: '#0067b8',
+            brandBlueDark: '#005da6',
+            brandBlueLight: '#e6f2fb',
+            brandNavy: '#171717',
+            brandGold: '#d97706',
+            brandSlate: '#505050',
+            bgCanvas: '#ffffff',
+            cardBorder: '#e5e5e5'
+          },
+          fontFamily: {
+            sans: ['"Segoe UI"', '-apple-system', 'BlinkMacSystemFont', 'Roboto', '"Helvetica Neue"', 'sans-serif'],
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            mono: ['"IBM Plex Mono"', 'Consolas', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Early Global Dispatch & Safe Stubs for 100% Clickability at 0ms Latency -->
+  <script>
+    window.switchTab = function(tabId) {
+      if (window._moduleLoaded && typeof window._realSwitchTab === 'function') {
+        window._realSwitchTab(tabId);
+        return;
+      }
+      var tabHyArez = document.getElementById('tab-hy-arez');
+      var tabDI = document.getElementById('tab-desain-industri');
+      var tabAM = document.getElementById('tab-additive-manufacturing');
+      var tabPort = document.getElementById('tab-portofolio');
+      var viewPost = document.getElementById('view-post');
+      if (tabHyArez) tabHyArez.classList.add('hidden');
+      if (tabDI) tabDI.classList.add('hidden');
+      if (tabAM) tabAM.classList.add('hidden');
+      if (tabPort) tabPort.classList.add('hidden');
+      if (viewPost) viewPost.classList.add('hidden');
+
+      var target = document.getElementById('tab-' + tabId);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('.subnav-tab').forEach(function(b) { b.classList.remove('active'); });
+      var activeBtn = document.getElementById('subnav-' + tabId);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      window.location.hash = '#' + tabId;
+      if (window.renderHyArezFeatured && tabId === 'hy-arez') window.renderHyArezFeatured();
+      if (window.renderDesainIndustri && tabId === 'desain-industri') window.renderDesainIndustri();
+      if (window.renderAdditiveManufacturing && tabId === 'additive-manufacturing') window.renderAdditiveManufacturing();
+      if (window.renderPortfolio && tabId === 'portofolio') window.renderPortfolio('all');
+    };
+
+    window.showPost = function(id) {
+      if (window._realShowPost) window._realShowPost(id);
+      else window.location.hash = '#post-' + id;
+    };
+    window.returnToActiveFeed = function() {
+      if (window._realReturnToActiveFeed) window._realReturnToActiveFeed();
+      else window.switchTab('desain-industri');
+    };
+    window.filterDesainIndustri = function(cat, btn) {
+      if (window._realFilterDesainIndustri) window._realFilterDesainIndustri(cat, btn);
+    };
+    window.filterPortfolio = function(cat, btn) {
+      if (window._realFilterPortfolio) window._realFilterPortfolio(cat, btn);
+    };
+    window.openPortfolioModal = function(id) {
+      if (window._realOpenPortfolioModal) window._realOpenPortfolioModal(id);
+    };
+    window.closePortfolioModal = function() {
+      var m = document.getElementById('portfolio-modal');
+      if (m) m.classList.add('hidden');
+    };
+    window.openLoginModal = function() {
+      var m = document.getElementById('login-modal');
+      if (m) m.classList.remove('hidden');
+    };
+    window.closeLoginModal = function() {
+      var m = document.getElementById('login-modal');
+      if (m) m.classList.add('hidden');
+    };
+    window.handleWriteButtonClick = function() {
+      if (window._realHandleWriteButtonClick) window._realHandleWriteButtonClick();
+      else window.openLoginModal();
+    };
+    window.openArticleEditor = function(id) {
+      if (window._realOpenArticleEditor) window._realOpenArticleEditor(id);
+    };
+    window.closeArticleEditor = function() {
+      var m = document.getElementById('article-editor-modal');
+      if (m) m.classList.add('hidden');
+    };
+    window.openPortfolioEditor = function(id) {
+      if (window._realOpenPortfolioEditor) window._realOpenPortfolioEditor(id);
+    };
+    window.closePortfolioEditor = function() {
+      var m = document.getElementById('portfolio-editor-modal');
+      if (m) m.classList.add('hidden');
+    };
+    window.handleDeletePortfolio = function(id) {
+      if (window._realHandleDeletePortfolio) window._realHandleDeletePortfolio(id);
+    };
+    window.editCurrentPortfolioModal = function() {
+      if (window._realEditCurrentPortfolioModal) window._realEditCurrentPortfolioModal();
+    };
+    window.deleteCurrentPortfolioModal = function() {
+      if (window._realDeleteCurrentPortfolioModal) window._realDeleteCurrentPortfolioModal();
+    };
+    window.openConfirmDeleteModal = function(t, m, c) {
+      if (window._realOpenConfirmDeleteModal) window._realOpenConfirmDeleteModal(t, m, c);
+    };
+    window.closeConfirmDeleteModal = function() {
+      var m = document.getElementById('confirm-delete-modal');
+      if (m) m.classList.add('hidden');
+    };
+    window.handleSearch = function(q) {
+      if (window._realHandleSearch) window._realHandleSearch(q);
+    };
+    window.showToast = function(msg, icon) {
+      if (window._realShowToast) window._realShowToast(msg, icon);
+    };
+  </script>
+
+  <style>body{color:#262626;-webkit-font-smoothing:antialiased;background-color:#fff;font-family:Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif}.font-serif-reading{font-family:Newsreader,Georgia,serif}.subnav-tab{color:#262626;font-weight:500;transition:color .15s;position:relative}.subnav-tab:hover{color:#0067b8}.subnav-tab.active{color:#0067b8;font-weight:600}.subnav-tab.active:after{content:"";background-color:#0067b8;height:2px;position:absolute;bottom:0;left:.75rem;right:.75rem}.line-clamp-2{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.line-clamp-3{-webkit-line-clamp:3;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:#f2f2f2}::-webkit-scrollbar-thumb{background:#c7c7c7;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#9e9e9e}</style>
+  <script type="module" crossorigin src="./assets/main-C-XTeGpW.js"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-white text-[#262626]">
+
+  <!-- ======================================================== -->
+  <!-- 1. MICROSOFT SIGNATURE TOP NAVBAR                        -->
+  <!-- ======================================================== -->
+  <header class="sticky top-0 z-40 bg-white border-b border-[#e6e6e6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
+      
+      <!-- Left: Authentic IDE Indonesia Logo & Brand Title -->
+      <div class="flex items-center gap-6">
+        <a href="#hy-arez" onclick="switchTab('hy-arez')" class="flex items-center gap-2.5 shrink-0 group focus:outline-none" title="Beranda Hy Arez — Arif Reza Basirun (IDE Indonesia)">
+          <img
+            src="./logo.png"
+            alt="IDE Indonesia Logo"
+            class="w-7 h-7 sm:w-8 sm:h-8 object-contain shrink-0"
+            onerror="this.onerror=null; this.src='./logo-mark.svg';"
+          >
+          <span class="text-base sm:text-lg font-semibold tracking-tight text-[#262626] group-hover:text-[#0067b8] transition-colors flex items-center gap-2">
+            Hy Arez
+            <span class="text-xs text-[#616161] font-normal hidden md:inline border-l border-[#d2d2d2] pl-2">IDE Indonesia</span>
+          </span>
+        </a>
+
+        <!-- Microsoft Clean Top Links (Desktop) -->
+        <nav class="hidden lg:flex items-center space-x-1 text-[13px] text-[#262626]">
+          <button type="button" onclick="switchTab('hy-arez')" class="px-2.5 py-1 hover:text-[#0067b8] hover:underline underline-offset-4 cursor-pointer">Hy Arez</button>
+          <button type="button" onclick="switchTab('desain-industri')" class="px-2.5 py-1 hover:text-[#0067b8] hover:underline underline-offset-4 cursor-pointer">Desain Industri</button>
+          <button type="button" onclick="switchTab('additive-manufacturing')" class="px-2.5 py-1 hover:text-[#0067b8] hover:underline underline-offset-4 cursor-pointer">Additive Manufacturing</button>
+          <button type="button" onclick="switchTab('portofolio')" class="px-2.5 py-1 hover:text-[#0067b8] hover:underline underline-offset-4 cursor-pointer">Portofolio</button>
+        </nav>
+      </div>
+
+      <!-- Right Action Strip: Search, Views, User & Write -->
+      <div class="flex items-center gap-3 sm:gap-4 text-[13px]">
+        
+        <!-- Search Input with Sleek Microsoft Outline -->
+        <div class="relative max-w-[200px] sm:max-w-xs hidden sm:block">
+          <div class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-[#616161]">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <input
+            type="text"
+            id="global-search-input"
+            oninput="handleSearch(this.value)"
+            placeholder="Cari kajian, CAD, regulasi..."
+            class="w-full pl-8 pr-2.5 py-1 text-xs bg-white rounded-none border border-[#8a8a8a] text-[#262626] placeholder-[#616161] focus:outline-none focus:border-[#0067b8] focus:ring-1 focus:ring-[#0067b8] transition-all"
+          >
+        </div>
+
+        <!-- Real Views Count (Microsoft subtle metric) -->
+        <div class="hidden md:flex items-center gap-1.5 text-xs text-[#616161] border-l border-[#e6e6e6] pl-3">
+          <span>Tayangan:</span>
+          <strong id="global-real-views" class="font-semibold text-[#262626]">0</strong>
+        </div>
+
+        <!-- Microsoft Account / Writer Section -->
+        <div id="auth-guest-section">
+          <button
+            type="button"
+            onclick="openLoginModal()"
+            class="px-2.5 py-1 text-xs text-[#262626] hover:text-[#0067b8] font-medium transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+            title="Masuk sebagai Penulis (Arez)"
+          >
+            <span class="w-6 h-6 rounded-full border border-[#8a8a8a] flex items-center justify-center text-[#616161]">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+            </span>
+            <span class="hidden sm:inline">Masuk</span>
+          </button>
+        </div>
+
+        <div id="auth-admin-section" class="hidden flex items-center gap-2">
+          <span class="text-xs text-[#0e700e] font-semibold bg-[#eaf5ea] px-2 py-0.5 border border-[#c1e5c1] inline-flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#107c10]"></span>
+            Arez (Penulis)
+          </span>
+          <button
+            type="button"
+            onclick="logoutAdmin()"
+            class="text-xs text-[#616161] hover:text-[#c42b1c] transition-colors cursor-pointer hover:underline"
+            title="Keluar dari sesi penulis"
+          >
+            Logout
+          </button>
+        </div>
+
+        <!-- Microsoft Primary Button Style (+ Tulis Konten) -->
+        <button
+          type="button"
+          onclick="handleWriteButtonClick()"
+          class="bg-[#0067b8] hover:bg-[#005da6] active:bg-[#004e8c] text-white font-semibold px-3 py-1.5 text-xs transition-colors shadow-xs inline-flex items-center gap-1.5 cursor-pointer"
+          title="Tambah Konten Baru"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4"></path></svg>
+          <span>Tulis Konten</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- 2. MICROSOFT SECONDARY SUB-NAV BAR                       -->
+  <!-- ======================================================== -->
+  <nav class="bg-white border-b border-[#e6e6e6] sticky top-14 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-start gap-1 sm:gap-6 overflow-x-auto text-[13px] font-medium text-[#262626] no-scrollbar">
+      
+      <button
+        type="button"
+        id="subnav-hy-arez"
+        onclick="switchTab('hy-arez')"
+        class="subnav-tab active px-3 py-3 hover:text-[#0067b8] shrink-0 cursor-pointer"
+      >
+        Profil &amp; Rekam Jejak
+      </button>
+
+      <button
+        type="button"
+        id="subnav-desain-industri"
+        onclick="switchTab('desain-industri')"
+        class="subnav-tab px-3 py-3 hover:text-[#0067b8] shrink-0 cursor-pointer"
+      >
+        Kajian Desain Industri
+      </button>
+
+      <button
+        type="button"
+        id="subnav-additive-manufacturing"
+        onclick="switchTab('additive-manufacturing')"
+        class="subnav-tab px-3 py-3 hover:text-[#0067b8] shrink-0 cursor-pointer"
+      >
+        Additive Manufacturing
+      </button>
+
+      <button
+        type="button"
+        id="subnav-portofolio"
+        onclick="switchTab('portofolio')"
+        class="subnav-tab px-3 py-3 hover:text-[#0067b8] shrink-0 cursor-pointer"
+      >
+        Portofolio Desain
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ======================================================== -->
+  <!-- VIEW 1: HY AREZ (Biodata, Showcase Hero & Rekam Jejak)   -->
+  <!-- TAMPILAN INI HANYA MUNCUL DI MENU HY AREZ                -->
+  <!-- ======================================================== -->
+  <div id="tab-hy-arez" class="space-y-0">
+
+    <!-- 1a. MICROSOFT SHOWCASE HERO BANNER (Only on Hy Arez) -->
+    <section class="bg-[#f2f2f2] border-b border-[#e6e6e6] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Text Showcase Column -->
+      <div class="lg:col-span-7 space-y-4">
+        <div class="inline-block px-2.5 py-0.5 bg-[#e6f2fb] text-[#0067b8] font-semibold text-xs uppercase tracking-wider">
+          Direktorat Jenderal Kekayaan Intelektual · DJKI Kemenkumham RI
+        </div>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#262626] tracking-tight leading-tight">
+          Kajian Desain Industri &amp; Rekayasa Additive Manufacturing
+        </h1>
+        <p class="text-sm sm:text-base text-[#505050] leading-relaxed max-w-2xl">
+          Eksplorasi kepastian hukum 4 elemen yuridis UU No. 31 Tahun 2000, pendaftaran internasional Sistem Hague WIPO, optimasi cetak 3D printing FDM/SLA/SLS, serta inspeksi 3D CAD interaktif oleh Arif Reza Basirun.
+        </p>
+
+        <!-- Microsoft Signature Dual CTAs -->
+        <div class="pt-2 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onclick="switchTab('portofolio')"
+            class="px-5 py-2.5 bg-[#0067b8] hover:bg-[#005da6] active:bg-[#004e8c] text-white font-semibold text-xs sm:text-sm transition-colors cursor-pointer inline-flex items-center gap-2"
+          >
+            <span>Jelajahi Portofolio Desain</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+
+          <button
+            type="button"
+            onclick="switchTab('desain-industri')"
+            class="px-4 py-2.5 bg-transparent text-[#0067b8] hover:text-[#005da6] hover:underline font-semibold text-xs sm:text-sm cursor-pointer inline-flex items-center gap-1.5"
+          >
+            <span>Baca Kajian Kebaruan</span>
+            <span class="font-bold">&gt;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Visual Column (Showcase Image / 3D Preview) -->
+      <div class="lg:col-span-5 relative flex items-center justify-center">
+        <div class="w-full bg-white border border-[#e6e6e6] p-4 shadow-sm hover:shadow-md transition-shadow">
+          <img
+            src="./slide_24.png"
+            alt="Showcase Mesin Kepang & CAD 3D"
+            class="w-full h-56 sm:h-64 object-contain bg-[#fafafa]"
+            onerror="this.onerror=null; this.src='slide_24.png';"
+          >
+          <div class="pt-3 border-t border-[#f2f2f2] flex items-center justify-between text-xs text-[#616161]">
+            <span class="font-semibold text-[#262626]">Invensi Mesin Kepang Serat Sutra</span>
+            <span class="text-[#0067b8] font-semibold hover:underline cursor-pointer" onclick="switchTab('portofolio')">Lihat Portofolio &gt;</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 3b. MICROSOFT 4-COLUMN QUICK ACTION ICONS STRIP          -->
+  <!-- ======================================================== -->
+  <section class="border-b border-[#e6e6e6] bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <!-- Action 1 -->
+        <div onclick="switchTab('desain-industri')" class="group cursor-pointer flex flex-col items-center text-center p-3 hover:bg-[#f8f8f8] transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center text-[#0067b8] mb-2 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h2 class="text-sm font-semibold text-[#262626] group-hover:text-[#0067b8] transition-colors">Pengujian Kebaruan</h2>
+          <p class="text-xs text-[#616161] mt-1 leading-normal">4 Elemen Yuridis UU 31/2000 &amp; Sistem Hague WIPO</p>
+          <span class="text-xs font-semibold text-[#0067b8] mt-2 group-hover:underline inline-flex items-center gap-0.5">Pelajari &gt;</span>
+        </div>
+
+        <!-- Action 2 -->
+        <div onclick="switchTab('additive-manufacturing')" class="group cursor-pointer flex flex-col items-center text-center p-3 hover:bg-[#f8f8f8] transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center text-[#0067b8] mb-2 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <h2 class="text-sm font-semibold text-[#262626] group-hover:text-[#0067b8] transition-colors">Additive Manufacturing</h2>
+          <p class="text-xs text-[#616161] mt-1 leading-normal">Riset FDM Taguchi, SLA &amp; Desain DFAM</p>
+          <span class="text-xs font-semibold text-[#0067b8] mt-2 group-hover:underline inline-flex items-center gap-0.5">Eksplorasi &gt;</span>
+        </div>
+
+        <!-- Action 3 -->
+        <div onclick="switchTab('portofolio')" class="group cursor-pointer flex flex-col items-center text-center p-3 hover:bg-[#f8f8f8] transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center text-[#0067b8] mb-2 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+          </div>
+          <h2 class="text-sm font-semibold text-[#262626] group-hover:text-[#0067b8] transition-colors">Portofolio Desain</h2>
+          <p class="text-xs text-[#616161] mt-1 leading-normal">Desain 2D, Pemodelan CAD 3D &amp; Prototipe Jadi</p>
+          <span class="text-xs font-semibold text-[#0067b8] mt-2 group-hover:underline inline-flex items-center gap-0.5">Lihat Portofolio &gt;</span>
+        </div>
+
+        <!-- Action 4 -->
+        <div onclick="switchTab('hy-arez')" class="group cursor-pointer flex flex-col items-center text-center p-3 hover:bg-[#f8f8f8] transition-colors">
+          <div class="w-12 h-12 flex items-center justify-center text-[#0067b8] mb-2 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          </div>
+          <h2 class="text-sm font-semibold text-[#262626] group-hover:text-[#0067b8] transition-colors">Hilirisasi &amp; Kum Dosen</h2>
+          <p class="text-xs text-[#616161] mt-1 leading-normal">Angka Kredit 15 Kum &amp; Layanan Cepat 4 Bulan DJKI</p>
+          <span class="text-xs font-semibold text-[#0067b8] mt-2 group-hover:underline inline-flex items-center gap-0.5">Lihat Panduan &gt;</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- 1c. HY AREZ: PROFIL RESMI, 4 PILAR & PUBLIKASI UNGGULAN -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+      
+      <!-- Bio Summary Card (Microsoft Corporate Profile Style) -->
+      <div class="bg-white border border-[#e6e6e6] p-6 sm:p-10 shadow-xs space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-[#e6e6e6] pb-6">
+          <div class="flex items-center gap-5">
+            <img
+              src="./logo.png"
+              alt="Arif Reza Basirun"
+              class="w-20 h-20 border border-[#e6e6e6] p-1 bg-white object-contain shrink-0"
+              onerror="this.onerror=null; this.src='./logo-mark.svg';"
+            >
+            <div>
+              <span class="text-xs font-semibold text-[#0067b8] uppercase tracking-wider block">
+                Profil Resmi · Pemeriksa Desain Industri Ahli Pertama
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-[#262626] mt-0.5">
+                Arif Reza Basirun (Arez)
+              </h2>
+              <p class="text-xs sm:text-sm text-[#616161] font-normal mt-0.5">
+                Direktorat Jenderal Kekayaan Intelektual (DJKI) Kementerian Hukum RI · Alumnus Magister Teknik Industri UGM
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="mailto:arif.reza.djki@gmail.com"
+            class="px-4 py-2.5 bg-[#0067b8] hover:bg-[#005da6] active:bg-[#004e8c] text-white text-xs font-semibold transition-colors shrink-0 text-center inline-flex items-center justify-center gap-2"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span>Hubungi via Email</span>
+          </a>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm text-[#444444] leading-relaxed">
+          <p>
+            Arif Reza Basirun mengemban tugas fungsional sebagai <strong>Pemeriksa Desain Industri Ahli Pertama</strong> di Direktorat Jenderal Kekayaan Intelektual (DJKI) Kementerian Hukum RI. Dengan latar belakang pendidikan Magister Teknik Industri (S2) dari Universitas Gadjah Mada (UGM), ia berfokus pada integrasi kepastian hukum kekayaan intelektual dengan ranah rekayasa teknologi: <strong>Desain Produk Engineering</strong>, <strong>Additive Manufacturing (3D Printing)</strong>, dan <strong>CAD/CAM</strong>.
+          </p>
+          <p>
+            Dalam tugas kesehariannya, Arez menguji substansi kebaruan desain industri berdasarkan 4 elemen yuridis pokok UU No. 31 Tahun 2000 (Bentuk 3D, Konfigurasi spasial, Komposisi Garis, dan Komposisi Warna), sekaligus memilah fitur utilitarian fungsional paten dari kreasi visual murni.
+          </p>
+        </div>
+
+        <!-- 4 Pillars of Competencies (Microsoft 4-Column Feature Tiles) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          <div class="p-5 bg-[#fafafa] border border-[#e6e6e6] space-y-2">
+            <span class="text-xs font-semibold text-[#0067b8] block">
+              Pemeriksaan Substantif
+            </span>
+            <p class="text-xs text-[#616161] leading-relaxed">
+              Pengujian kebaruan visual 4 elemen yuridis UU No. 31 Tahun 2000, pemilahan fungsi paten, dan penerapan standar WIPO Hague System.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#fafafa] border border-[#e6e6e6] space-y-2">
+            <span class="text-xs font-semibold text-[#0067b8] block">
+              Additive Manufacturing
+            </span>
+            <p class="text-xs text-[#616161] leading-relaxed">
+              Riset parameter cetak FDM/SLA/SLS, metode Taguchi transmisi horn gears mesin kepang UGM, dan validasi prototipe pra-injeksi massal.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#fafafa] border border-[#e6e6e6] space-y-2">
+            <span class="text-xs font-semibold text-[#0067b8] block">
+              CAD/CAM &amp; Surface
+            </span>
+            <p class="text-xs text-[#616161] leading-relaxed">
+              Pemodelan parametrik kontur kurvatur G2, analisis kinematika gerak gear, serta standardisasi gambar 7 tampak ortogonal formalitas.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#fafafa] border border-[#e6e6e6] space-y-2">
+            <span class="text-xs font-semibold text-[#0067b8] block">
+              Hilirisasi &amp; Kum Dosen
+            </span>
+            <p class="text-xs text-[#616161] leading-relaxed">
+              Pendampingan komersialisasi hasil riset, angka kredit dosen 15 kum (Kepmendikbudristek 209/P/2024), serta percepatan layanan 4 bulan DJKI.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rekam Jejak Terverifikasi (Microsoft Enterprise Directory Style) -->
+      <div class="bg-white border border-[#e6e6e6] p-6 sm:p-10 shadow-xs space-y-5">
+        <div class="border-b border-[#e6e6e6] pb-3 flex items-center justify-between">
+          <div>
+            <h3 class="text-lg sm:text-xl font-semibold text-[#262626] tracking-tight">
+              Rekam Jejak Akademik &amp; Invensi Terverifikasi
+            </h3>
+            <p class="text-xs text-[#616161]">Tautan resmi ke pangkalan data kekayaan intelektual dan repositori institusi terakreditasi.</p>
+          </div>
+          <span class="text-xs text-[#0e700e] bg-[#eaf5ea] px-2.5 py-1 border border-[#c1e5c1] font-semibold">
+            Terverifikasi Resmi
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+          
+          <!-- Track 1: S2 UGM Thesis -->
+          <div class="p-5 bg-white border border-[#e6e6e6] hover:border-[#0067b8] transition-colors flex flex-col justify-between gap-3 text-xs">
+            <div class="space-y-1">
+              <span class="font-semibold text-[#262626] text-sm block">Magister Teknik Industri (S2) — UGM</span>
+              <p class="text-[#616161] leading-relaxed">
+                Tesis: Optimasi parameter cetak FDM pada transmisi roda gigi tanduk (horn gears) prototipe mesin kepang serat sutra alami.
+              </p>
+            </div>
+            <a
+              href="https://etd.repository.ugm.ac.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs font-semibold text-[#0067b8] hover:underline inline-flex items-center gap-1 self-start"
+            >
+              <span>Buka Dokumen ETD UGM</span>
+              <span>&gt;</span>
+            </a>
+          </div>
+
+          <!-- Track 2: Invensi Mesin Kepang -->
+          <div class="p-5 bg-white border border-[#e6e6e6] hover:border-[#0067b8] transition-colors flex flex-col justify-between gap-3 text-xs">
+            <div class="space-y-1">
+              <span class="font-semibold text-[#262626] text-sm block">Invensi Terdaftar: Mesin Kepang Benang Mini</span>
+              <p class="text-[#616161] leading-relaxed">
+                Inventor: Arif Reza Basirun dkk. — Pendaftaran Hak Kekayaan Intelektual Terpadu Universitas Gadjah Mada.
+              </p>
+            </div>
+            <a
+              href="https://pdki-indonesia.dgip.go.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs font-semibold text-[#0067b8] hover:underline inline-flex items-center gap-1 self-start"
+            >
+              <span>Lihat Data PDKI DJKI</span>
+              <span>&gt;</span>
+            </a>
+          </div>
+
+          <!-- Track 3: Gusi Tiruan 3D -->
+          <div class="p-5 bg-white border border-[#e6e6e6] hover:border-[#0067b8] transition-colors flex flex-col justify-between gap-3 text-xs">
+            <div class="space-y-1">
+              <span class="font-semibold text-[#262626] text-sm block">Desain Industri: Proses Gusi Tiruan 3D Printing</span>
+              <p class="text-[#616161] leading-relaxed">
+                Rancangan kontur gingiva estetik dental presisi tinggi berbasis resin medis biokompatibel.
+              </p>
+            </div>
+            <a
+              href="https://pdki-indonesia.dgip.go.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs font-semibold text-[#0067b8] hover:underline inline-flex items-center gap-1 self-start"
+            >
+              <span>Lihat Data Sertifikat</span>
+              <span>&gt;</span>
+            </a>
+          </div>
+
+          <!-- Track 4: DJKI Kementerian Hukum RI -->
+          <div class="p-5 bg-white border border-[#e6e6e6] hover:border-[#0067b8] transition-colors flex flex-col justify-between gap-3 text-xs">
+            <div class="space-y-1">
+              <span class="font-semibold text-[#262626] text-sm block">Jabatan Fungsional: Pemeriksa Desain Industri</span>
+              <p class="text-[#616161] leading-relaxed">
+                Direktorat Hak Cipta dan Desain Industri, DJKI Kementerian Hukum RI.
+              </p>
+            </div>
+            <a
+              href="https://dgip.go.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs font-semibold text-[#0067b8] hover:underline inline-flex items-center gap-1 self-start"
+            >
+              <span>Portal Resmi DJKI</span>
+              <span>&gt;</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Featured Highlights in Hy Arez (Microsoft 4-Column Showcase) -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between border-b border-[#e6e6e6] pb-3">
+          <div>
+            <h3 class="text-xl font-semibold text-[#262626]">Karya &amp; Publikasi Unggulan</h3>
+            <p class="text-xs text-[#616161]">Kajian pilihan seputar regulasi desain industri, rekayasa aditif, dan pembuktian kebaruan.</p>
+          </div>
+          <button type="button" onclick="switchTab('desain-industri')" class="text-xs text-[#0067b8] hover:underline font-semibold cursor-pointer inline-flex items-center gap-1">
+            <span>Lihat semua kajian</span>
+            <span>&gt;</span>
+          </button>
+        </div>
+        
+        <div id="hy-arez-featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically populated via renderArticleCard -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 4. MAIN CONTENT CONTAINER (Halaman Lain Saat Menu Diklik) -->
+  <!-- ======================================================== -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+
+    <!-- ============================================== -->
+    <!-- VIEW 2: DESAIN INDUSTRI FEED                   -->
+    <!-- ============================================== -->
+    <section id="tab-desain-industri" class="hidden space-y-6">
+      
+      <!-- Rubrik Header (Microsoft Enterprise Section Style) -->
+      <div class="bg-white border border-[#e6e6e6] p-6 sm:p-8 space-y-3 shadow-xs">
+        <span class="text-xs font-semibold text-[#0067b8] uppercase tracking-wider block">
+          Rubrik Spesialisasi · DJKI Kementerian Hukum RI
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#262626]">
+          Kajian Desain Industri &amp; Pengujian Kebaruan Substantif
+        </h2>
+        <p class="text-xs sm:text-sm text-[#505050] leading-relaxed max-w-4xl">
+          Kumpulan analisis rupa produk, pemilahan fungsi utilitarian paten vs estetika 4 elemen yuridis UU No. 31 Tahun 2000, teori formalisme Clive Bell, dekonstruksi GEON Biederman, prinsip MAYA Loewy, hingga percepatan layanan permohonan 4 bulan di DJKI.
+        </p>
+
+        <!-- Category Filters in Microsoft Style -->
+        <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
+          <button
+            type="button"
+            onclick="filterDesainIndustri('all', this)"
+            class="di-filter-btn px-3 py-1.5 bg-[#0067b8] text-white font-semibold cursor-pointer"
+          >
+            Semua Kajian
+          </button>
+          <button
+            type="button"
+            onclick="filterDesainIndustri('regulasi', this)"
+            class="di-filter-btn px-3 py-1.5 bg-white border border-[#8a8a8a] hover:bg-[#f2f2f2] text-[#262626] font-medium cursor-pointer"
+          >
+            Regulasi &amp; Kebijakan
+          </button>
+          <button
+            type="button"
+            onclick="filterDesainIndustri('hukum', this)"
+            class="di-filter-btn px-3 py-1.5 bg-white border border-[#8a8a8a] hover:bg-[#f2f2f2] text-[#262626] font-medium cursor-pointer"
+          >
+            Hukum 4 Elemen
+          </button>
+          <button
+            type="button"
+            onclick="filterDesainIndustri('teori', this)"
+            class="di-filter-btn px-3 py-1.5 bg-white border border-[#8a8a8a] hover:bg-[#f2f2f2] text-[#262626] font-medium cursor-pointer"
+          >
+            Teori &amp; Persepsi Estetika
+          </button>
+        </div>
+      </div>
+
+      <!-- Feed Grid (Microsoft 4-Column Card Grid matching image.png) -->
+      <div id="feed-desain-industri" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamically populated via renderArticleCard -->
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 3: ADDITIVE MANUFACTURING FEED            -->
+    <!-- ============================================== -->
+    <section id="tab-additive-manufacturing" class="hidden space-y-6">
+      <div class="bg-white border border-[#e6e6e6] p-6 sm:p-8 space-y-3 shadow-xs">
+        <span class="text-xs font-semibold text-[#0067b8] uppercase tracking-wider block">
+          3D Printing &amp; CAD/CAM · Riset UGM &amp; Industri
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#262626]">
+          Additive Manufacturing: Dari Layar CAD Menuju Cetak Massal
+        </h2>
+        <p class="text-xs sm:text-sm text-[#505050] leading-relaxed max-w-4xl">
+          Penerapan 3D printing untuk akselerasi litbang desain produk, optimasi parameter FDM/SLA, riset transmisi horn gears mesin kepang sutra, panduan Design for Additive Manufacturing (DFAM), dan validasi ergonomi sebelum mold cetakan injeksi baja.
+        </p>
+      </div>
+
+      <!-- Feed Grid (Microsoft 4-Column Card Grid) -->
+      <div id="feed-additive-manufacturing" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamically populated via renderArticleCard -->
+      </div>
+    </section>    <!-- ============================================== -->
+    <!-- VIEW 4: PORTOFOLIO (2D, 3D & Produk Jadi)      -->
+    <!-- ============================================== -->
+    <section id="tab-portofolio" class="hidden space-y-6">
+      
+      <!-- Portfolio Header (Microsoft Style) -->
+      <div class="bg-white border border-[#e6e6e6] p-6 sm:p-8 space-y-3 shadow-xs">
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <span class="text-xs font-semibold text-[#0067b8] uppercase tracking-wider block">
+            Galeri Karya · Desain 2D, 3D CAD &amp; Prototipe Jadi
+          </span>
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              onclick="openPortfolioEditor()"
+              id="btn-add-portfolio"
+              class="px-3.5 py-1.5 bg-[#0067b8] hover:bg-[#005da6] active:bg-[#004e8c] text-white font-semibold text-xs transition-colors inline-flex items-center gap-1.5 cursor-pointer shadow-xs"
+              title="Tambah karya portofolio baru"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+              <span>Tambah Karya</span>
+            </button>
+            <span class="text-xs text-[#616161] hidden sm:inline border-l border-[#e6e6e6] pl-2">Oleh Arif Reza Basirun</span>
+          </div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#262626]">
+          Portofolio Desain: 2D Brand Identity, CAD Modeling &amp; Produk Fisik
+        </h2>
+        <p class="text-xs sm:text-sm text-[#505050] leading-relaxed max-w-4xl">
+          Dokumentasi karya rancangan Arez — mulai dari identitas visual 2D (logo IDE Indonesia), pemodelan CAD 3D parametrik (komponen mekanikal, horn gears, setrika ergonomis), hingga produk jadi hasil 3D print dan invensi terdaftar.
+        </p>
+
+        <!-- Microsoft Filter Buttons -->
+        <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
+          <button
+            type="button"
+            id="port-filter-all"
+            onclick="filterPortfolio('all', this)"
+            class="portfolio-filter-btn px-3 py-1.5 font-semibold bg-[#0067b8] text-white cursor-pointer"
+          >
+            Semua Karya (8)
+          </button>
+          <button
+            type="button"
+            id="port-filter-2d"
+            onclick="filterPortfolio('2d', this)"
+            class="portfolio-filter-btn px-3 py-1.5 bg-white border border-[#8a8a8a] hover:bg-[#f2f2f2] text-[#262626] font-medium cursor-pointer"
+          >
+            Desain 2D &amp; Logo (2)
+          </button>
+          <button
+            type="button"
+            id="port-filter-3d"
+            onclick="filterPortfolio('3d', this)"
+            class="portfolio-filter-btn px-3 py-1.5 bg-white border border-[#8a8a8a] hover:bg-[#f2f2f2] text-[#262626] font-medium cursor-pointer"
+          >
+            Desain 3D &amp; CAD Modeling (3)
+          </button>
+          <button
+            type="button"
+            id="port-filter-produk"
+            onclick="filterPortfolio('produk', this)"
+            class="portfolio-filter-btn px-3 py-1.5 bg-white border border-[#8a8a8a] hover:bg-[#f2f2f2] text-[#262626] font-medium cursor-pointer"
+          >
+            Produk Jadi &amp; 3D Print (3)
+          </button>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid (Microsoft 4-Column Card Grid) -->
+      <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamically populated via renderPortfolio -->
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 5: SINGLE POST VIEW (Microsoft Editorial) -->
+    <!-- ============================================== -->
+    <article id="view-post" class="hidden bg-white border border-[#e6e6e6] p-6 sm:p-12 shadow-xs space-y-8 max-w-4xl mx-auto">
+      
+      <!-- Back button & Breadcrumb -->
+      <nav class="flex items-center justify-between text-xs text-[#616161] border-b border-[#e6e6e6] pb-4">
+        <button
+          type="button"
+          onclick="returnToActiveFeed()"
+          class="inline-flex items-center gap-1.5 font-semibold text-[#0067b8] hover:underline cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          <span>Kembali ke Daftar Kajian</span>
+        </button>
+
+        <!-- Admin Edit Button -->
+        <button
+          type="button"
+          id="single-post-admin-edit"
+          onclick="editCurrentArticle()"
+          class="hidden px-3 py-1.5 bg-[#d97706] hover:bg-[#b45309] text-white font-semibold text-xs transition-colors inline-flex items-center gap-1 cursor-pointer shadow-xs"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+          <span>Edit Artikel Ini</span>
+        </button>
+      </nav>
+
+      <!-- Post Header -->
+      <header class="space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <span id="single-post-category-badge" class="px-2 py-0.5 bg-[#e6f2fb] text-[#0067b8] text-xs font-semibold uppercase tracking-wider">
+            Regulasi
+          </span>
+          <span id="single-post-readtime-badge" class="text-xs text-[#616161]">
+            Waktu Baca: 7 Menit
+          </span>
+        </div>
+
+        <h1 id="single-post-title" class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#262626] tracking-tight leading-tight">
+          <!-- Title -->
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-3 text-xs text-[#616161] pt-3 border-t border-[#e6e6e6]">
+          <span>Oleh <strong class="text-[#262626]">Arif Reza Basirun (Arez)</strong></span>
+          <span>&middot;</span>
+          <span id="single-post-date">20 Oktober 2026</span>
+          <span>&middot;</span>
+          <span class="text-[#262626] flex items-center gap-1 font-semibold">
+            <svg class="w-3.5 h-3.5 text-[#0067b8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            <span id="single-post-views">0</span> tayangan
+          </span>
+        </div>
+      </header>
+
+      <!-- Lead Quote -->
+      <div id="single-post-lead" class="text-base sm:text-lg italic text-[#262626] border-l-4 border-[#0067b8] pl-4 py-2 font-serif-reading leading-relaxed bg-[#f8f8f8]">
+        <!-- Lead -->
+      </div>
+
+      <!-- Body Content (HTML) -->
+      <div id="single-post-body" class="space-y-6 text-sm sm:text-base leading-relaxed text-[#262626] font-sans">
+        <!-- Full prose & charts -->
+      </div>
+
+      <!-- Labels -->
+      <div class="pt-6 border-t border-[#e6e6e6] flex flex-wrap items-center gap-2 text-xs">
+        <span class="font-semibold text-[#262626]">Topik Terkait:</span>
+        <div id="single-post-labels" class="flex flex-wrap items-center gap-1.5">
+          <!-- Labels -->
+        </div>
+      </div>
+
+      <!-- Real Comments Section (NO DUMMY COMMENTS) -->
+      <section id="article-comments-area" class="pt-8 border-t border-slate-200 space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Kolom Diskusi &amp; Tanggapan</h3>
+            <p class="text-xs text-slate-500">Tanggapan asli dari pembaca dan praktisi kekayaan intelektual.</p>
+          </div>
+          <span id="article-comment-count-badge" class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-mono font-bold">
+            0 komentar
+          </span>
+        </div>
+
+        <!-- Real Comment Input Form -->
+        <form id="comment-form" onsubmit="handleCommentSubmit(event)" class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Nama Lengkap:</label>
+              <input type="text" id="comm-name" required placeholder="Contoh: Budi Santoso" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white text-slate-800 text-xs focus:outline-none focus:border-brandBlue">
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1">Peran / Profesi:</label>
+              <input type="text" id="comm-role" placeholder="Contoh: Desainer Produk / Dosen Teknik" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white text-slate-800 text-xs focus:outline-none focus:border-brandBlue">
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-semibold text-slate-700 text-xs mb-1">Isi Komentar:</label>
+            <textarea id="comm-content" required rows="3" placeholder="Tuliskan komentar atau telaah Anda..." class="w-full p-2.5 rounded-lg border border-slate-300 bg-white text-slate-800 text-xs focus:outline-none focus:border-brandBlue"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between pt-1">
+            <span class="text-[11px] text-slate-400">Komentar riil tersimpan di peramban Anda</span>
+            <button type="submit" class="px-4 py-2 bg-brandBlue hover:bg-brandBlueDark text-white font-semibold rounded-lg text-xs transition-colors cursor-pointer shadow-xs">
+              Kirim Komentar
+            </button>
+          </div>
+
+          <div id="comm-success-msg" class="hidden p-2.5 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-medium">
+            Komentar Anda berhasil dipublikasikan!
+          </div>
+        </form>
+
+        <!-- Real Comments Stream (Zero Dummy Comments) -->
+        <div id="comments-stream" class="space-y-3 pt-2">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- 5. MODAL: LOGIN PENULIS (Arif Reza Basirun)              -->
+  <!-- ======================================================== -->
+  <div id="login-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-brandBlue text-white font-bold text-xs flex items-center justify-center">
+            IDE
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm">Akses Penulis Arez</h3>
+        </div>
+        <button type="button" onclick="closeLoginModal()" class="w-7 h-7 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 flex items-center justify-center cursor-pointer text-lg">&times;</button>
+      </div>
+
+      <form onsubmit="handleLoginSubmit(event)" class="space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Email / Pengguna:</label>
+          <input
+            type="text"
+            id="login-username"
+            value="arez"
+            required
+            class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 bg-slate-50 focus:bg-white focus:outline-none focus:border-brandBlue"
+          >
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Kata Sandi / PIN:</label>
+          <input
+            type="password"
+            id="login-password"
+            value="djki2026"
+            placeholder="Masukkan kata sandi..."
+            required
+            class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue"
+          >
+          <span class="text-[10px] text-slate-400 mt-1 block">Akun siap pakai: <code>arez</code> / <code>djki2026</code></span>
+        </div>
+
+        <div id="login-error-msg" class="hidden text-xs text-rose-600 bg-rose-50 p-2 rounded-lg border border-rose-200">
+          Kata sandi salah. Silakan coba kembali.
+        </div>
+
+        <div class="pt-2 flex flex-col gap-2">
+          <button type="submit" class="w-full py-2 rounded-lg bg-brandBlue hover:bg-brandBlueDark text-white font-semibold transition-colors cursor-pointer shadow-xs text-xs text-center">
+            Masuk sebagai Penulis
+          </button>
+          
+          <button
+            type="button"
+            onclick="quickLoginDemo()"
+            class="w-full py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold border border-emerald-200 transition-colors cursor-pointer text-xs text-center"
+          >
+            ⚡ Masuk Cepat sebagai Arez (1-Klik)
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 6. MODAL: CMS ARTICLE EDITOR (Tambah / Edit Konten Rinci) -->
+  <!-- ======================================================== -->
+  <div id="article-editor-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-4xl w-full my-6 shadow-2xl border border-slate-200 flex flex-col max-h-[92vh]">
+      
+      <!-- Editor Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0 bg-slate-50 rounded-t-2xl">
+        <div>
+          <h3 id="editor-modal-title" class="text-base sm:text-lg font-bold text-slate-900">
+            Editor Artikel Arez
+          </h3>
+          <p class="text-xs text-slate-500">Edit teks lengkap, kelola gambar (tambah/ganti/hapus), dan bangun grafik data.</p>
+        </div>
+        <button type="button" onclick="closeArticleEditor()" class="w-8 h-8 rounded-full hover:bg-slate-200 text-slate-500 hover:text-slate-900 flex items-center justify-center cursor-pointer text-xl">&times;</button>
+      </div>
+
+      <!-- Editor Modal Body (Scrollable) -->
+      <form id="editor-form" onsubmit="handleSaveArticle(event)" class="p-6 overflow-y-auto space-y-5 text-xs sm:text-sm flex-1">
+        
+        <input type="hidden" id="edit-id">
+
+        <!-- Grid: Tab Category & Sub Category -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Rubrik Utama:</label>
+            <select id="edit-tab" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 bg-white focus:outline-none focus:border-brandBlue">
+              <option value="desain-industri">Desain Industri</option>
+              <option value="additive-manufacturing">Additive Manufacturing</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Sub-Kategori / Badge:</label>
+            <input type="text" id="edit-category" required placeholder="Contoh: Regulasi & Kebijakan" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue">
+          </div>
+        </div>
+
+        <!-- Title -->
+        <div>
+          <label class="block font-bold text-slate-700 text-xs mb-1">Judul Artikel Lengkap:</label>
+          <input type="text" id="edit-title" required placeholder="Masukkan judul artikel..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-slate-900 font-semibold focus:outline-none focus:border-brandBlue">
+        </div>
+
+        <!-- Lead Quote -->
+        <div>
+          <label class="block font-bold text-slate-700 text-xs mb-1">Lead / Kalimat Pembuka (Kutipan Khusus):</label>
+          <textarea id="edit-lead" required rows="2" placeholder="Kalimat penegas di awal bacaan..." class="w-full p-2.5 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue"></textarea>
+        </div>
+
+        <!-- Excerpt for Cards -->
+        <div>
+          <label class="block font-bold text-slate-700 text-xs mb-1">Ringkasan Singkat (Excerpt di Daftar Kartu):</label>
+          <textarea id="edit-excerpt" required rows="2" placeholder="Ringkasan singkat yang tampil di beranda..." class="w-full p-2.5 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue"></textarea>
+        </div>
+
+        <!-- Grid: Read Time & Labels -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Estimasi Waktu Baca:</label>
+            <input type="text" id="edit-readtime" required placeholder="Contoh: 7 Menit" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Label / Tagar (Pisahkan Koma):</label>
+            <input type="text" id="edit-labels" placeholder="Contoh: DJKI, WIPO, UU 31/2000, 3D Print" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue">
+          </div>
+        </div>
+
+        <!-- Image Management: Cover Image (Add, Edit, Remove) -->
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-brandBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              <span>Gambar Sampul (Thumbnail)</span>
+            </label>
+            <button type="button" onclick="removeThumbnailImage()" class="text-xs text-rose-600 hover:underline font-semibold cursor-pointer">
+              &times; Hapus Gambar Sampul
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div>
+              <span class="block text-slate-500 mb-1">Unggah dari Perangkat:</span>
+              <input type="file" id="edit-thumb-file" accept="image/*" onchange="handleThumbnailFile(event)" class="w-full text-xs text-slate-600 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-brandBlue file:text-white hover:file:bg-brandBlueDark cursor-pointer">
+            </div>
+            <div>
+              <span class="block text-slate-500 mb-1">Atau URL Gambar:</span>
+              <input type="text" id="edit-thumb-url" oninput="updateThumbPreview(this.value)" placeholder="/slide_08.png atau https://..." class="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 text-xs focus:outline-none focus:border-brandBlue">
+            </div>
+          </div>
+
+          <!-- Thumbnail Preview Box -->
+          <div id="thumb-preview-container" class="mt-2 h-36 bg-slate-200 rounded-lg overflow-hidden border border-slate-300 flex items-center justify-center relative">
+            <img id="thumb-preview-img" src="./slide_08.png" alt="Pratinjau" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <!-- Body Content & Rich Formatting Toolbar -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <label class="font-bold text-slate-800 text-xs">
+              Isi Naskah Lengkap (Teks, Gambar &amp; Grafik Data):
+            </label>
+            <div class="flex items-center gap-1.5 text-xs">
+              <button type="button" onclick="toggleEditorPreviewTab('write')" id="tab-btn-write" class="px-2.5 py-1 rounded bg-brandBlue text-white font-semibold cursor-pointer">Tulis</button>
+              <button type="button" onclick="toggleEditorPreviewTab('preview')" id="tab-btn-prev" class="px-2.5 py-1 rounded bg-slate-200 text-slate-700 font-medium cursor-pointer">Pratinjau</button>
+            </div>
+          </div>
+
+          <!-- Formatting & Media Insertion Toolbar -->
+          <div class="flex flex-wrap items-center gap-1.5 p-2 bg-slate-100 rounded-lg border border-slate-300 text-xs">
+            <button type="button" onclick="insertFormat('b')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300 font-bold" title="Tebal (Bold)">B</button>
+            <button type="button" onclick="insertFormat('i')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300 italic" title="Miring (Italic)">I</button>
+            <button type="button" onclick="insertFormat('h3')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300 font-bold text-[11px]" title="Subjudul (H3)">H3</button>
+            <button type="button" onclick="insertFormat('quote')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300 font-serif" title="Kutipan (Quote)">&ldquo;&rdquo;</button>
+            <button type="button" onclick="insertFormat('ul')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300" title="Daftar Titik">&bull; List</button>
+            <button type="button" onclick="insertFormat('ol')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300" title="Daftar Angka">1. List</button>
+            <button type="button" onclick="insertFormat('p')" class="px-2 py-1 bg-white hover:bg-slate-200 rounded border border-slate-300" title="Paragraf Baru">&para; P</button>
+
+            <span class="text-slate-300 mx-1">|</span>
+
+            <!-- Feature 1: Image Inserter Tool -->
+            <button
+              type="button"
+              onclick="openInlineImageModal()"
+              class="px-2.5 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 rounded border border-amber-300 font-semibold inline-flex items-center gap-1 cursor-pointer"
+              title="Sisipkan Gambar ke Naskah"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              <span>+ Sisipkan Gambar</span>
+            </button>
+
+            <!-- Feature 2: Data Chart Builder Tool (Menambah Grafik Berdasarkan Data) -->
+            <button
+              type="button"
+              onclick="openDataChartModal()"
+              class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 rounded border border-emerald-300 font-semibold inline-flex items-center gap-1 cursor-pointer"
+              title="Bangun Diagram / Grafik Data Otomatis"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+              <span>+ Buat Grafik Data</span>
+            </button>
+          </div>
+
+          <!-- Textarea for Writing -->
+          <div id="editor-write-panel">
+            <textarea
+              id="edit-body"
+              required
+              rows="12"
+              placeholder="Tuliskan naskah artikel Anda di sini..."
+              class="w-full p-3.5 rounded-lg border border-slate-300 font-mono text-xs leading-relaxed focus:outline-none focus:border-brandBlue"
+            ></textarea>
+          </div>
+
+          <!-- Live HTML Preview -->
+          <div id="editor-preview-panel" class="hidden p-5 rounded-lg border border-slate-200 bg-white max-h-80 overflow-y-auto space-y-4 text-xs sm:text-sm">
+            <!-- Rendered preview -->
+          </div>
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between shrink-0">
+          <div>
+            <button
+              type="button"
+              id="btn-delete-article"
+              onclick="handleDeleteArticle()"
+              class="hidden px-3.5 py-2 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-300 font-semibold text-xs transition-colors cursor-pointer"
+            >
+              Hapus Artikel Ini
+            </button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              onclick="closeArticleEditor()"
+              class="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold text-xs cursor-pointer"
+            >
+              Batal
+            </button>
+            <button
+              type="submit"
+              class="px-5 py-2 rounded-lg bg-brandBlue hover:bg-brandBlueDark text-white font-bold text-xs shadow-sm transition-all cursor-pointer"
+            >
+              Simpan &amp; Publikasikan
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 7. MODAL: DATA CHART BUILDER (Menambah Grafik Data)      -->
+  <!-- ======================================================== -->
+  <div id="chart-builder-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base">Generator Grafik Berdasarkan Data</h3>
+          <p class="text-xs text-slate-500">Buat grafik diagram batang visual atau kartu ringkasan data.</p>
+        </div>
+        <button type="button" onclick="closeDataChartModal()" class="w-7 h-7 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 flex items-center justify-center cursor-pointer text-lg">&times;</button>
+      </div>
+
+      <div class="space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Tipe Grafik:</label>
+          <select id="chart-type" class="w-full px-3 py-2 rounded-lg border border-slate-300 bg-white">
+            <option value="bar">Diagram Batang Horizontal (Komparasi Nilai & Persentase)</option>
+            <option value="column">Diagram Kolom Vertikal (Perbandingan Kategori)</option>
+            <option value="metrics">Kartu Grid Ringkasan Metrik Data</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Judul Grafik:</label>
+          <input type="text" id="chart-title" value="Tren Permohonan Desain Industri (2024)" class="w-full px-3 py-1.5 rounded-lg border border-slate-300">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Sumber / Rujukan Data:</label>
+          <input type="text" id="chart-source" value="WIPO Statistics & DJKI Kementerian Hukum RI" class="w-full px-3 py-1.5 rounded-lg border border-slate-300">
+        </div>
+
+        <!-- Dynamic Data Rows -->
+        <div class="space-y-2 pt-1">
+          <div class="flex items-center justify-between">
+            <label class="font-semibold text-slate-800">Baris Data:</label>
+            <button type="button" onclick="addChartRow()" class="text-brandBlue hover:underline font-bold text-[11px] cursor-pointer">
+              + Tambah Baris
+            </button>
+          </div>
+
+          <div id="chart-rows-list" class="space-y-2">
+            <!-- Row 1 -->
+            <div class="chart-row flex items-center gap-2">
+              <input type="text" placeholder="Label" value="Tiongkok (CNIPA)" class="row-label w-1/3 px-2 py-1 rounded border border-slate-300 text-xs">
+              <input type="text" placeholder="Nilai" value="825.330 desain" class="row-val w-1/3 px-2 py-1 rounded border border-slate-300 text-xs">
+              <input type="text" placeholder="Persen / Rasio" value="100%" class="row-pct w-1/4 px-2 py-1 rounded border border-slate-300 text-xs">
+              <button type="button" onclick="this.parentElement.remove()" class="text-rose-500 font-bold px-1 text-sm cursor-pointer">&times;</button>
+            </div>
+            <!-- Row 2 -->
+            <div class="chart-row flex items-center gap-2">
+              <input type="text" placeholder="Label" value="Uni Eropa (EUIPO)" class="row-label w-1/3 px-2 py-1 rounded border border-slate-300 text-xs">
+              <input type="text" placeholder="Nilai" value="115.800 desain" class="row-val w-1/3 px-2 py-1 rounded border border-slate-300 text-xs">
+              <input type="text" placeholder="Persen" value="45%" class="row-pct w-1/4 px-2 py-1 rounded border border-slate-300 text-xs">
+              <button type="button" onclick="this.parentElement.remove()" class="text-rose-500 font-bold px-1 text-sm cursor-pointer">&times;</button>
+            </div>
+            <!-- Row 3 -->
+            <div class="chart-row flex items-center gap-2">
+              <input type="text" placeholder="Label" value="Indonesia (DJKI)" class="row-label w-1/3 px-2 py-1 rounded border border-slate-300 text-xs">
+              <input type="text" placeholder="Nilai" value="7.926 desain" class="row-val w-1/3 px-2 py-1 rounded border border-slate-300 text-xs">
+              <input type="text" placeholder="Persen" value="15%" class="row-pct w-1/4 px-2 py-1 rounded border border-slate-300 text-xs">
+              <button type="button" onclick="this.parentElement.remove()" class="text-rose-500 font-bold px-1 text-sm cursor-pointer">&times;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-end gap-2">
+          <button type="button" onclick="closeDataChartModal()" class="px-3 py-1.5 rounded-lg border border-slate-300 text-slate-600 cursor-pointer">Batal</button>
+          <button type="button" onclick="generateAndInsertChart()" class="px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold cursor-pointer shadow-xs">
+            Sisipkan Grafik ke Naskah
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 8. MODAL: INLINE IMAGE INSERTER (Tambah Gambar Naskah)   -->
+  <!-- ======================================================== -->
+  <div id="image-inserter-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <h3 class="font-bold text-slate-900 text-sm">Sisipkan Gambar ke Naskah</h3>
+        <button type="button" onclick="closeInlineImageModal()" class="w-7 h-7 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 flex items-center justify-center cursor-pointer text-lg">&times;</button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Unggah dari Komputer:</label>
+          <input type="file" id="inline-img-file" accept="image/*" onchange="handleInlineImageFile(event)" class="w-full text-xs text-slate-600 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-brandBlue file:text-white cursor-pointer">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Atau URL Gambar:</label>
+          <input type="text" id="inline-img-url" placeholder="/setrika_morfologi.png atau https://..." class="w-full px-3 py-1.5 rounded-lg border border-slate-300">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Keterangan Gambar (Caption):</label>
+          <input type="text" id="inline-img-caption" placeholder="Contoh: Gambar 1: Dekonstruksi morfologi garis..." class="w-full px-3 py-1.5 rounded-lg border border-slate-300">
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-end gap-2">
+          <button type="button" onclick="closeInlineImageModal()" class="px-3 py-1.5 rounded-lg border border-slate-300 text-slate-600 cursor-pointer">Batal</button>
+          <button type="button" onclick="insertInlineImageToBody()" class="px-4 py-1.5 rounded-lg bg-brandBlue hover:bg-brandBlueDark text-white font-bold cursor-pointer shadow-xs">
+            Sisipkan Gambar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 9. MODAL: DETAIL PORTOFOLIO                              -->
+  <!-- ======================================================== -->
+  <div id="portfolio-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
+      <div class="p-5 border-b border-slate-100 flex items-center justify-between sticky top-0 bg-white z-10">
+        <div>
+          <span id="modal-category" class="px-2.5 py-0.5 rounded-full bg-brandBlue text-white font-mono text-[10px] font-bold uppercase"></span>
+          <h3 id="modal-title" class="text-base sm:text-lg font-bold text-slate-900 mt-1"></h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            id="modal-portfolio-edit-btn"
+            onclick="editCurrentPortfolioModal()"
+            class="px-2.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs transition-colors inline-flex items-center gap-1 cursor-pointer shadow-xs"
+            title="Edit karya ini"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+            <span>Edit</span>
+          </button>
+          <button
+            type="button"
+            id="modal-portfolio-delete-btn"
+            onclick="deleteCurrentPortfolioModal()"
+            class="px-2.5 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 font-semibold text-xs transition-colors inline-flex items-center gap-1 cursor-pointer border border-rose-200"
+            title="Hapus karya ini"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+            <span>Hapus</span>
+          </button>
+          <button type="button" onclick="closePortfolioModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 cursor-pointer text-lg">&times;</button>
+        </div>
+      </div>
+
+      <div class="p-6 space-y-4 text-xs sm:text-sm">
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 max-h-72 sm:max-h-80 flex items-center justify-center">
+          <img id="modal-image" src="" alt="" class="w-full h-auto max-h-80 object-contain">
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-xs">
+          <div>
+            <span class="text-slate-400 block font-mono text-[10px] uppercase">Tahun Perancangan</span>
+            <span id="modal-year" class="font-bold text-slate-900 font-mono"></span>
+          </div>
+          <div>
+            <span class="text-slate-400 block font-mono text-[10px] uppercase">Tipe Karya</span>
+            <span id="modal-type" class="font-bold text-slate-900"></span>
+          </div>
+          <div>
+            <span class="text-slate-400 block font-mono text-[10px] uppercase">Software / Mesin</span>
+            <span id="modal-software" class="font-bold text-slate-900 font-mono"></span>
+          </div>
+        </div>
+
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Status &amp; Pendaftaran</h4>
+          <p id="modal-status" class="text-brandBlue leading-relaxed font-semibold"></p>
+        </div>
+
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Deskripsi Desain &amp; Konsep</h4>
+          <p id="modal-desc" class="text-slate-600 leading-relaxed"></p>
+        </div>
+
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Aspek Rekayasa &amp; Manufaktur</h4>
+          <p id="modal-engineering" class="text-slate-600 leading-relaxed"></p>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between text-xs rounded-b-2xl">
+        <span class="text-slate-400">Portofolio Desain Arif Reza Basirun</span>
+        <button type="button" onclick="closePortfolioModal()" class="px-4 py-1.5 bg-brandBlue hover:bg-brandBlueDark text-white rounded-lg font-semibold transition-colors cursor-pointer shadow-xs">
+          Tutup Pratinjau
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 9b. MODAL: CMS PORTFOLIO EDITOR (Tambah / Edit Portofolio)-->
+  <!-- ======================================================== -->
+  <div id="portfolio-editor-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-2xl w-full my-6 shadow-2xl border border-slate-200 flex flex-col max-h-[92vh]">
+      
+      <!-- Editor Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between shrink-0 bg-slate-50 rounded-t-2xl">
+        <div>
+          <h3 id="portfolio-editor-title" class="text-base sm:text-lg font-bold text-slate-900">
+            Tambah Karya Portofolio
+          </h3>
+          <p class="text-xs text-slate-500">Kelola dokumentasi karya 2D, model 3D CAD parametrik, dan prototipe fisik.</p>
+        </div>
+        <button type="button" onclick="closePortfolioEditor()" class="w-8 h-8 rounded-full hover:bg-slate-200 text-slate-500 hover:text-slate-900 flex items-center justify-center cursor-pointer text-xl">&times;</button>
+      </div>
+
+      <!-- Editor Modal Form -->
+      <form id="portfolio-editor-form" onsubmit="handleSavePortfolio(event)" class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm flex-1">
+        
+        <input type="hidden" id="edit-port-id">
+
+        <!-- Title -->
+        <div>
+          <label class="block font-bold text-slate-700 text-xs mb-1">Judul Karya / Proyek:</label>
+          <input
+            type="text"
+            id="edit-port-title"
+            required
+            placeholder="Contoh: Horn Gears Silk Fiber Braiding Machine"
+            class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue font-medium text-sm"
+          >
+        </div>
+
+        <!-- Grid: Kategori & Tahun -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Kategori Karya:</label>
+            <select id="edit-port-category" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 bg-white focus:outline-none focus:border-brandBlue">
+              <option value="3d">Desain 3D &amp; CAD Modeling</option>
+              <option value="produk">Produk Jadi &amp; 3D Print</option>
+              <option value="2d">Desain 2D &amp; Logo</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Tahun Perancangan:</label>
+            <input
+              type="text"
+              id="edit-port-year"
+              required
+              placeholder="Contoh: 2026 atau 2024 - 2025"
+              class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue"
+            >
+          </div>
+        </div>
+
+        <!-- Grid: Tipe & Software -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Tipe Format / Spesifikasi:</label>
+            <input
+              type="text"
+              id="edit-port-type"
+              required
+              placeholder="Contoh: 3D CAD Modeling &amp; Additive Manufacturing"
+              class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue"
+            >
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Software / Mesin:</label>
+            <input
+              type="text"
+              id="edit-port-software"
+              required
+              placeholder="Contoh: SolidWorks 2024 / PrusaSlicer"
+              class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue font-mono text-xs"
+            >
+          </div>
+        </div>
+
+        <!-- Grid: Status & Model 3D Three.js -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Status HKI / Legalitas:</label>
+            <input
+              type="text"
+              id="edit-port-status"
+              required
+              placeholder="Contoh: Riset Tesis S2 UGM / Terdaftar DJKI"
+              class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue"
+            >
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 text-xs mb-1">Integrasi Model 3D (Three.js):</label>
+            <select id="edit-port-model" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 bg-white focus:outline-none focus:border-brandBlue">
+              <option value="">Tanpa Model 3D (Gambar saja)</option>
+              <option value="horn-gear">⚙️ Horn Gears (Kinematika Mesin Kepang)</option>
+              <option value="iron">⚡ Setrika Ergonomis (Morfologi Kurva G2)</option>
+              <option value="lamp">💡 Lampu Modular GEON (Bentuk Geometris)</option>
+              <option value="iot">📱 Casing Enclosure IoT (Snap-Fit Dual-Tone)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Image / Thumbnail -->
+        <div class="space-y-2 pt-1 border-t border-slate-100">
+          <label class="block font-bold text-slate-700 text-xs">Gambar Sampul / Ilustrasi Karya:</label>
+          <div class="flex items-center gap-3">
+            <input
+              type="text"
+              id="edit-port-thumbnail"
+              placeholder="/slide_23.png atau URL eksternal"
+              oninput="updatePortThumbPreview(this.value)"
+              class="flex-1 px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue font-mono text-xs"
+            >
+            <label class="px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs cursor-pointer inline-flex items-center gap-1 shrink-0">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              <span>Upload</span>
+              <input type="file" accept="image/*" class="hidden" onchange="handleThumbnailPortfolioFile(event)">
+            </label>
+          </div>
+
+          <!-- Preset Thumbnails Selector -->
+          <div class="space-y-1">
+            <span class="text-[11px] text-slate-400 font-mono">Pilih cepat dari galeri aset:</span>
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1">
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/slide_23.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Horn Gears</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/slide_24.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Mesin Mini</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/slide_25.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Gusi SLA</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/setrika_morfologi.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Setrika G2</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/lampu_15_variants.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Lampu GEON</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/slide_27.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Casing IoT</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/ferrari_tesla_cars.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Siluet Mobil</button>
+              <button type="button" onclick="selectPresetPortfolioThumbnail('/logo.png')" class="px-2 py-0.5 rounded text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-mono shrink-0">Logo IDE</button>
+            </div>
+          </div>
+
+          <!-- Preview Container -->
+          <div id="port-thumb-preview-box" class="mt-2 w-full max-h-48 rounded-xl bg-slate-50 border border-slate-200 p-2 flex items-center justify-center overflow-hidden">
+            <img id="port-thumb-preview-img" src="./slide_24.png" alt="Preview" class="max-h-44 max-w-full object-contain rounded">
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label class="block font-bold text-slate-700 text-xs mb-1">Deskripsi Konsep &amp; Desain:</label>
+          <textarea
+            id="edit-port-description"
+            rows="3"
+            required
+            placeholder="Jelaskan tujuan perancangan, estetika bentuk, dan kebutuhan pengguna..."
+            class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue leading-relaxed"
+          ></textarea>
+        </div>
+
+        <!-- Engineering Specs -->
+        <div>
+          <label class="block font-bold text-slate-700 text-xs mb-1">Aspek Rekayasa &amp; Manufaktur:</label>
+          <textarea
+            id="edit-port-engineering"
+            rows="3"
+            required
+            placeholder="Jelaskan parameter cetak, material (PETG/SLA), toleransi dimensi, analisis kurvatur, dll..."
+            class="w-full px-3 py-2 rounded-lg border border-slate-300 text-slate-900 focus:outline-none focus:border-brandBlue leading-relaxed"
+          ></textarea>
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+          <button
+            type="button"
+            id="btn-delete-portfolio"
+            onclick="handleDeletePortfolio()"
+            class="hidden px-3.5 py-2 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-600 font-semibold text-xs transition-colors border border-rose-200 cursor-pointer inline-flex items-center gap-1.5"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+            <span>Hapus Karya Ini</span>
+          </button>
+          
+          <div class="flex items-center gap-2 ml-auto">
+            <button
+              type="button"
+              onclick="closePortfolioEditor()"
+              class="px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors cursor-pointer"
+            >
+              Batal
+            </button>
+            <button
+              type="submit"
+              class="px-5 py-2 rounded-lg bg-brandBlue hover:bg-brandBlueDark text-white font-semibold text-xs transition-colors shadow-xs cursor-pointer inline-flex items-center gap-1.5"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Simpan Karya</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 9c. MODAL: IN-APP CONFIRM DELETE (Anti window.confirm iframe block) -->
+  <!-- ======================================================== -->
+  <div id="confirm-delete-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 space-y-4 text-center">
+      <div class="w-12 h-12 mx-auto rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xl">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+      </div>
+      <div class="space-y-1">
+        <h3 id="confirm-delete-title" class="text-base font-bold text-slate-900">Konfirmasi Hapus</h3>
+        <p id="confirm-delete-desc" class="text-xs text-slate-500 leading-relaxed">Apakah Anda yakin ingin menghapus item ini?</p>
+      </div>
+      <div class="pt-2 flex items-center gap-2">
+        <button
+          type="button"
+          onclick="closeConfirmDeleteModal()"
+          class="flex-1 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors cursor-pointer"
+        >
+          Batal
+        </button>
+        <button
+          type="button"
+          id="confirm-delete-execute-btn"
+          class="flex-1 px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-semibold text-xs transition-colors shadow-xs cursor-pointer inline-flex items-center justify-center gap-1.5"
+        >
+          <span>Hapus Sekarang</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-App Floating Toast Notification -->
+  <div id="app-toast" class="hidden fixed bottom-5 right-5 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl border border-slate-700 flex items-center gap-2 transition-all transform">
+    <span id="app-toast-icon">✅</span>
+    <span id="app-toast-message">Operasi berhasil</span>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 10. MICROSOFT CORPORATE FOOTER                           -->
+  <!-- ======================================================== -->
+  <footer class="mt-auto bg-[#f2f2f2] border-t border-[#e6e6e6] text-xs text-[#616161]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 space-y-8">
+      
+      <!-- Multi-Column Microsoft Corporate Directory Links -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <h4 class="font-semibold text-xs text-[#262626]">Desain Industri &amp; Regulasi</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button type="button" onclick="switchTab('desain-industri')" class="hover:underline text-left cursor-pointer">4 Elemen Yuridis UU 31/2000</button></li>
+            <li><button type="button" onclick="switchTab('desain-industri')" class="hover:underline text-left cursor-pointer">Sistem Hague WIPO</button></li>
+            <li><button type="button" onclick="switchTab('desain-industri')" class="hover:underline text-left cursor-pointer">Layanan Cepat 4 Bulan DJKI</button></li>
+            <li><button type="button" onclick="switchTab('desain-industri')" class="hover:underline text-left cursor-pointer">Teori Formalisme &amp; GEON</button></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-semibold text-xs text-[#262626]">Additive Manufacturing &amp; CAD</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button type="button" onclick="switchTab('additive-manufacturing')" class="hover:underline text-left cursor-pointer">Optimasi Cetak FDM &amp; Taguchi</button></li>
+            <li><button type="button" onclick="switchTab('additive-manufacturing')" class="hover:underline text-left cursor-pointer">Design for Additive (DFAM)</button></li>
+            <li><button type="button" onclick="switchTab('portofolio')" class="hover:underline text-left cursor-pointer">Portofolio Desain</button></li>
+            <li><button type="button" onclick="switchTab('additive-manufacturing')" class="hover:underline text-left cursor-pointer">Titik Impas Injeksi Massal</button></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-semibold text-xs text-[#262626]">Riset &amp; Institusi Resmi</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://etd.repository.ugm.ac.id" target="_blank" rel="noopener noreferrer" class="hover:underline">Repositori ETD UGM</a></li>
+            <li><a href="https://pdki-indonesia.dgip.go.id" target="_blank" rel="noopener noreferrer" class="hover:underline">Pangkalan Data KI (PDKI)</a></li>
+            <li><a href="https://dgip.go.id" target="_blank" rel="noopener noreferrer" class="hover:underline">Direktorat Jenderal KI (DJKI)</a></li>
+            <li><button type="button" onclick="switchTab('hy-arez')" class="hover:underline text-left cursor-pointer">Angka Kredit Dosen 15 Kum</button></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-semibold text-xs text-[#262626]">Tentang &amp; Akun</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button type="button" onclick="switchTab('hy-arez')" class="hover:underline text-left cursor-pointer">Profil Arif Reza Basirun (Arez)</button></li>
+            <li><button type="button" onclick="switchTab('portofolio')" class="hover:underline text-left cursor-pointer">Portofolio Karya Lengkap</button></li>
+            <li><a href="mailto:arif.reza.djki@gmail.com" class="hover:underline">Kontak Resmi Penulis</a></li>
+            <li><button type="button" onclick="openLoginModal()" class="hover:underline text-left text-[#0067b8] font-semibold cursor-pointer">Masuk Akun Penulis Arez</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Microsoft Locale & Legal Bar -->
+      <div class="pt-6 border-t border-[#d2d2d2] flex flex-col md:flex-row md:items-center justify-between gap-4 text-[11px]">
+        <div class="flex items-center gap-2">
+          <button type="button" class="hover:underline flex items-center gap-1.5 cursor-pointer font-medium text-[#262626]">
+            <span>🌐</span>
+            <span>Indonesia (Bahasa Indonesia)</span>
+          </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[#616161]">
+          <span>© 2026 IDE Indonesia — Arif Reza Basirun. Hak Cipta Dilindungi Undang-Undang.</span>
+          <button type="button" onclick="switchTab('hy-arez')" class="hover:underline cursor-pointer">Privasi &amp; Legalitas</button>
+          <button type="button" onclick="switchTab('desain-industri')" class="hover:underline cursor-pointer">Ketentuan Kebaruan</button>
+          <button type="button" onclick="openLoginModal()" class="hover:underline text-[#0067b8] cursor-pointer">Akses Penulis</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT: FIRESTORE DATABASE, CMS, REAL VIEWS & REAL COMMENTS -->
+  <!-- ======================================================== -->
+</body>
+</html>
